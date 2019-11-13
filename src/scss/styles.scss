@@ -1,0 +1,27 @@
+@import './variables';
+@import './reset';
+@import './components/global';
+@import './components/popups';
+@import './components/swiper';
+@import './components/header';
+@import './components/footer';
+@import './components/categories';
+@import './components/homepage';
+@import './components/products';
+@import './components/product';
+
+// ShortCodes
+@import './components/shortcodes/products';
+@import './components/shortcodes/banners';
+@import './components/shortcodes/blog';
+@import './components/shortcodes/tabulation';
+@import './components/shortcodes/icon-description';
+
+@import './components/masonry';
+
+// Pages
+@import './components/pages/home';
+@import './components/pages/contacts';
+@import './components/pages/checkout';
+@import './components/pages/cart';
+@import './components/pages/blog';

@@ -1,0 +1,122 @@
+//colors
+$c-suva-gray: #888;
+$c-rio-grande: #b8cd06;
+$c-gallery: #eee;
+
+.aligned-middle-image-shortcode {
+  position: absolute;
+  left: 50%;
+  width: 0;
+  top: 0;
+  height: 100%;
+  img {
+    max-height: 100%;
+    width: auto;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+.categories-wrapper {
+}
+.category-link {
+  font-size: 11px;
+  line-height: 18px;
+  color: $c-suva-gray;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  padding: 15px 0 15px 40px;
+  position: relative;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.15s;
+  &:hover {
+    color: $c-rio-grande;
+  }
+  &.active {
+    color: $c-rio-grande;
+  }
+  span {
+    width: 20px;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    top: 15px;
+  }
+}
+.client-logo-entry {
+  overflow: hidden;
+  border: 1px $c-gallery solid;
+  float: left;
+  width: 20%;
+  position: relative;
+  margin: -1px 0 0 -1px;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+    &:nth-child(2) {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      transform: translateY(100%);
+    }
+  }
+  &:hover img {
+    transform: translateY(-100%);
+    &:nth-child(2) {
+      transform: translateY(0);
+    }
+  }
+}
+.big-slider-product {
+  text-align: center;
+  padding: 0 15px;
+  .preview {
+    margin: 0 auto 30px auto;
+    opacity: 0.05;
+    transform: scale(0.7);
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+  .description {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+}
+@media (max-width: 991px) {
+  .client-logo-entry {
+    width: 25%;
+  }
+}
+@media (max-width: 767px) {
+  .client-logo-entry {
+    width: 50%;
+  }
+}
+.swiper-slide-active .big-slider-product {
+  .preview {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .description {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+body.loaded .big-slider-product {
+  .description {
+    transition: all 0.5s;
+  }
+  .preview {
+    transition: all 0.5s;
+  }
+}

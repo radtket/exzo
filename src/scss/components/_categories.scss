@@ -1,0 +1,183 @@
+//colors
+$c-fuscous-gray: #555;
+$c-suva-gray: #888;
+$c-black-haze: #f7f7f7;
+$white: #fff;
+$white-50: rgba(255, 255, 255, 0.5);
+$c-tuatara: #343434;
+$c-cape-cod: #3f3f3f;
+$c-rio-grande: #b8cd06;
+$gallery: #efefef;
+
+//urls
+$url-0: url('http://unionagency.one/exzo/img/icon-12.png');
+$url-1: url('http://unionagency.one/exzo/img/icon-13.png');
+$url-2: url('http://unionagency.one/exzo/img/icon-18.png');
+
+%cates-extend-1 {
+  background: $c-rio-grande;
+  border-color: $white-50;
+  color: $white;
+}
+
+.categories-menu {
+  position: relative;
+  z-index: 1;
+
+  ul {
+    clear: both;
+  }
+
+  li {
+    position: relative;
+
+    &::after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+
+    a {
+      backface-visibility: hidden;
+      background: $white;
+      border-bottom: 1px $c-black-haze solid;
+      color: $c-suva-gray;
+      display: block;
+      float: left;
+      font-family: Raleway, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 16px;
+      padding: 15px 46px 15px 20px;
+      text-transform: uppercase;
+      transition: all 0.15s;
+      width: 100%;
+
+      &:hover {
+        @extend %cates-extend-1;
+
+        + .toggle {
+          background-image: $url-1;
+        }
+      }
+    }
+
+    ul {
+      a {
+        background: $c-tuatara;
+        border-color: $c-cape-cod;
+        color: $white-50;
+
+        &:hover {
+          @extend %cates-extend-1;
+
+          + .toggle {
+            background-image: $url-1;
+          }
+        }
+      }
+    }
+  }
+
+  .toggle {
+    width: 46px;
+    height: 46px;
+    float: left;
+    margin-left: -46px;
+    cursor: pointer;
+    background: $url-0 center center no-repeat;
+    position: relative;
+  }
+
+  &.transparent > li > a {
+    background: transparent;
+    padding-left: 0;
+    border-color: $gallery;
+
+    &:hover {
+      color: $c-rio-grande;
+
+      + .toggle {
+        background-image: $url-2;
+      }
+    }
+
+    + .toggle {
+      background-position: right 10px center;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .categories-menu {
+    ul {
+      position: absolute;
+      left: -1000%;
+      top: 0;
+      width: 100%;
+      transform-origin: 0 50%;
+      transform: perspective(1000px) rotateY(45deg);
+      opacity: 0;
+      transition: transform 0.3s, opacity 0.3s, left 0s 0.3s;
+      display: block !important;
+    }
+
+    &.alignleft {
+      ul {
+        right: 1000%;
+        left: auto;
+        top: 0;
+        width: 100%;
+        transform-origin: 100% 50%;
+        transform: perspective(1000px) rotateY(45deg);
+        opacity: 0;
+        transition: transform 0.3s, opacity 0.3s, right 0s 0.3s;
+        display: block !important;
+      }
+
+      li {
+        &:hover {
+          > ul {
+            transform: perspective(1000px) rotateY(0deg);
+            opacity: 1;
+            right: 100%;
+            left: auto;
+            transition: transform 0.3s, opacity 0.3s, right 0s;
+          }
+        }
+      }
+    }
+
+    li {
+      &:hover {
+        > ul {
+          transform: perspective(1000px) rotateY(0deg);
+          opacity: 1;
+          left: 100%;
+          transition: transform 0.3s, opacity 0.3s, left 0s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .categories-menu {
+    ul {
+      display: none;
+
+      ul li a {
+        padding-left: 40px;
+        background: $c-fuscous-gray;
+      }
+    }
+
+    .toggle {
+      transform: rotate(90deg);
+
+      &.active {
+        transform: rotate(270deg);
+      }
+    }
+  }
+}

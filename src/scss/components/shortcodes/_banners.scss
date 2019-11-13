@@ -1,0 +1,222 @@
+//colors
+$c-heavy-metal: #2c2c2c;
+$c-fuscous-gray: #555;
+$white: #fff;
+
+.banner-shortcode {
+  &.style-1 {
+    padding-bottom: 40%;
+    position: relative;
+    overflow: hidden;
+    .background {
+      background-position: left center;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .banner-title {
+      font-size: 30px;
+      line-height: 32px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+  }
+  &.style-2 {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    max-width: 270px;
+    .content {
+      padding-bottom: 155%;
+    }
+    .background {
+      background-position: center bottom;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .banner-title {
+      font-size: 20px;
+      line-height: 32px;
+      text-transform: uppercase;
+    }
+    .description {
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      top: 15px;
+      height: 30%;
+    }
+  }
+  &.style-3 {
+    background-size: cover;
+    background-position: right top;
+    position: relative;
+    .angle-left {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 15px 15px 0;
+      border-color: transparent $white transparent transparent;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -7px;
+    }
+    .angle-right {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 0 15px 15px;
+      border-color: transparent transparent transparent $white;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -7px;
+    }
+    .valign-middle-cell {
+      height: 480px;
+      padding: 30px 50px;
+      display: table-cell;
+      width: 10000px;
+      vertical-align: middle;
+    }
+    .valign-middle-content {
+      max-width: 390px;
+    }
+    .slider-product-preview + .valign-middle-content {
+      max-width: 50%;
+    }
+  }
+  &.style-4 {
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    .valign-middle-cell {
+      height: 650px;
+      padding: 30px 15px;
+      display: table-cell;
+      vertical-align: middle;
+      width: 10000px;
+    }
+    .valign-middle-content {
+      max-width: 390px;
+      margin: 0 auto;
+    }
+  }
+  &.style-5 {
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    .valign-middle {
+      min-height: 225px;
+      padding: 30px 50px;
+    }
+    .valign-middle-content {
+      max-width: 260px;
+    }
+  }
+  &.style-6 {
+    padding: 50px 30px 50px 15px;
+    background: $white;
+    &::after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .image {
+      float: left;
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+    }
+    .content {
+      margin-left: 270px;
+    }
+    .cell-view {
+      height: 250px;
+    }
+  }
+  &.text-center .valign-middle-content {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .banner-shortcode.style-1 .description {
+    position: absolute;
+    height: 100%;
+    width: 35%;
+    text-align: center;
+    right: 15px;
+    background: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .banner-shortcode {
+    &.style-1 {
+      padding-bottom: 0;
+      .background {
+        position: relative;
+        padding-bottom: 40%;
+      }
+      .description {
+        padding: 20px 15px;
+        background: $c-heavy-metal;
+        text-align: center;
+        border-top: 1px $c-fuscous-gray solid;
+        display: block;
+      }
+    }
+    &.style-3 {
+      .valign-middle-cell {
+        height: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .slider-product-preview + .valign-middle-content {
+        max-width: 100%;
+      }
+    }
+    &.style-6 {
+      padding: 30px 15px;
+      .image {
+        float: none;
+        margin: 0 auto 30px auto;
+        display: block;
+      }
+      .content {
+        margin-left: 0;
+      }
+      .cell-view {
+        height: 0;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .banner-shortcode.style-3.wide .valign-middle {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media (max-width: 991px) {
+  .banner-shortcode.style-4 .valign-middle-cell {
+    height: 0;
+  }
+}
+@media (max-width: 1199px) {
+  .banner-shortcode.style-6 {
+    .image {
+      max-width: 190px;
+    }
+    .content {
+      margin-left: 210px;
+    }
+  }
+}

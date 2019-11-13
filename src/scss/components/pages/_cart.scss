@@ -1,0 +1,111 @@
+//colors
+$c-tuatara: #343434;
+$white: #fff;
+$c-gallery: #eee;
+
+.cart-table {
+  width: 100%;
+  th {
+    background: $c-tuatara;
+    font-weight: 700;
+    font-family: Raleway, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: $white;
+    height: 70px;
+    vertical-align: middle;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+    &:nth-child(2) {
+      padding-left: 0;
+      text-align: left;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px $c-gallery solid;
+    }
+    td {
+      vertical-align: middle;
+      padding: 25px 10px;
+      text-align: center;
+      &:nth-child(2) {
+        text-align: left;
+        padding-left: 0;
+      }
+    }
+  }
+  .quantity-select {
+    display: inline-block;
+  }
+}
+@media (max-width: 767px) {
+  .cart-table {
+    display: block;
+    position: relative;
+    tbody {
+      display: block;
+      position: relative;
+      td {
+        &:nth-child(1) {
+          padding-left: 0 !important;
+        }
+        &:nth-child(2) {
+          padding-left: 0 !important;
+        }
+      }
+    }
+    tr {
+      display: block;
+      position: relative;
+    }
+    td {
+      display: block;
+      position: relative;
+      text-align: left !important;
+      padding: 10px 0 10px 100px !important;
+      width: auto !important;
+      position: relative;
+      &::before {
+        content: attr(data-title);
+        color: $c-tuatara;
+        font-weight: 900;
+        font-family: Raleway, sans-serif;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 19px;
+        width: 100px;
+        padding-right: 10px;
+        position: absolute;
+        left: 0;
+        top: 7px;
+      }
+      &:last-child {
+        position: static;
+        padding: 0;
+      }
+    }
+    th {
+      display: block;
+      position: relative;
+    }
+    thead {
+      display: none;
+    }
+    .quantity-select {
+      width: 170px;
+    }
+    .button-close {
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+}

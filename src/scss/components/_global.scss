@@ -1,0 +1,1589 @@
+//urls
+$url-0: url('http://unionagency.one/exzo/img/icon-11.png');
+$url-1: url('http://unionagency.one/exzo/img/icon-20.png');
+$url-2: url('http://unionagency.one/exzo/img/icon-21.png');
+$url-3: url('http://unionagency.one/exzo/img/icon-5.png');
+$url-4: url('http://unionagency.one/exzo/img/icon-19.png');
+$url-5: url('http://unionagency.one/exzo/img/icon-6.png');
+
+#content-block {
+  position: relative;
+  overflow: hidden;
+  left: 0;
+}
+
+.container {
+  max-width: 100%;
+  position: relative;
+}
+.container-fluid {
+  position: relative;
+}
+.content-margins {
+  position: relative;
+  border-left: 50px transparent solid;
+  border-right: 50px transparent solid;
+  &.grey {
+    border-color: $c-black-haze;
+  }
+}
+@media (max-width: 991px) {
+  .content-margins {
+    border-width: 0 15px;
+  }
+  .cell-view {
+    &.page-height {
+      height: 500px !important;
+    }
+    &.simple-banner-height {
+      height: auto;
+      &.big {
+        height: auto;
+      }
+      &.middle {
+        height: auto;
+      }
+    }
+  }
+  .h1 {
+    font-size: 46px;
+    line-height: 46px;
+  }
+  .swiper-container.page-height {
+    height: 500px !important;
+  }
+  .simple-article h1 {
+    font-size: 46px;
+    line-height: 46px;
+  }
+  .buttons-wrapper .simple-article {
+    display: block;
+  }
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.page-height {
+  min-height: 500px;
+}
+body {
+  &.mobile {
+    .fixed-background {
+      background-attachment: scroll;
+    }
+    .swiper-container.page-height {
+      height: auto !important;
+      .swiper-wrapper {
+        height: auto !important;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: none !important;
+      }
+      .swiper-slide {
+        height: auto !important;
+      }
+      .swiper-pagination {
+        display: none;
+      }
+    }
+  }
+  ::selection {
+    color: $c-rio-grande;
+    background: $c-tuatara;
+  }
+  ::-moz-selection {
+    color: $c-rio-grande;
+    background: $c-tuatara;
+  }
+}
+.grey-background {
+  background: $c-black-haze;
+}
+@media (min-width: 992px) {
+  .visible-rd {
+    display: none !important;
+  }
+  .row.vertical-aligned-columns {
+    font-size: 0;
+    white-space: nowrap;
+    > div[class*='col'] {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      white-space: normal;
+    }
+  }
+}
+.image-thumbnail {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.table-view {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.row-view {
+  display: table-row;
+}
+.cell-view {
+  display: table-cell;
+  vertical-align: middle;
+  width: 10000px;
+  &.page-height {
+    position: relative;
+    z-index: 1;
+  }
+  &.simple-banner-height {
+    height: 600px;
+    &.middle {
+      height: 700px;
+    }
+    &.big {
+      height: 800px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .simple-article {
+    h1 {
+      font-size: 34px;
+      line-height: 40px;
+    }
+    h2 {
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+  .h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .h2 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .button {
+    display: block;
+    &.mobile-icon {
+      .text {
+        display: none;
+      }
+      .icon {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 0;
+        display: block;
+        width: auto;
+        height: auto;
+        line-height: inherit;
+      }
+      &.size-1 {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+      }
+      &.size-2 {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+  }
+  .cell-view.page-height {
+    height: auto !important;
+  }
+  .swiper-container.page-height {
+    height: auto !important;
+    .swiper-wrapper {
+      height: auto !important;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: none !important;
+    }
+    .swiper-slide {
+      height: auto !important;
+    }
+    .swiper-pagination {
+      display: none;
+    }
+  }
+  .buttons-wrapper .button {
+    margin-right: 0;
+  }
+  .follow .title {
+    margin: 0 0 10px 0;
+    display: block;
+    line-height: 18px;
+  }
+  .tags .title {
+    margin: 0 0 10px 0;
+    display: block;
+    line-height: 18px;
+  }
+}
+.nopadding {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  > *[class*='col'] {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.line-through {
+  display: inline-block;
+  position: relative;
+  padding: 0 5px;
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    background: currentColor;
+    content: '';
+  }
+}
+.valign-middle {
+  display: flex;
+  align-items: center;
+}
+.valign-middle-content {
+  width: 100%;
+  position: relative;
+}
+.full-size {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.fixed-background {
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+.align-inline {
+  display: inline-block;
+  vertical-align: middle;
+  &.spacing-1 {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+}
+.block {
+  display: block;
+}
+.rounded-image {
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 10px;
+}
+.block-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.row-background {
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  height: 100%;
+  &.big {
+    height: 112%;
+  }
+  img {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+    bottom: 0;
+    left: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(-50%) !important;
+  }
+  &.left {
+    left: 0;
+  }
+  &.right {
+    right: 0;
+  }
+}
+.block-entry {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.notransition {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: none !important;
+  * {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: none !important;
+  }
+}
+.simple-mouseover {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  * {
+    position: relative;
+  }
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $c-rio-grande-80;
+    content: '';
+    opacity: 0;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: inherit;
+  }
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $c-rio-grande-80;
+    content: '';
+    opacity: 0;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: inherit;
+    background: $url-0 center center no-repeat;
+    z-index: 1;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(180deg);
+  }
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+    &::before {
+      opacity: 1;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: rotate(0);
+    }
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+#loader-wrapper {
+  position: fixed;
+  left: 0;
+  top: -100px;
+  right: 0;
+  bottom: -100px;
+  background: $white;
+  z-index: 12;
+}
+.simple-article {
+  color: $c-suva-gray;
+  &.grey {
+    color: $c-fuscous-gray;
+  }
+  &.dark {
+    color: $c-tuatara;
+  }
+  &.light {
+    color: $white;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px 1px $black-10;
+    &.transparent {
+      color: $white-80;
+    }
+    &.fulltransparent {
+      color: $white-50;
+    }
+    h1 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    .h1 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    h2 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    .h2 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    h3 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    .h3 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    h4 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    .h4 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    h5 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    .h5 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    h6 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    .h6 {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px 1px $black-10;
+    }
+    ul li:before {
+      background-image: $url-2;
+    }
+  }
+  &.color {
+    color: $c-rio-grande;
+  }
+  &.size-1 {
+    font-size: 11px;
+    line-height: 18px;
+  }
+  &.size-2 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  &.size-3 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &.size-4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &.size-5 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  p {
+    margin-bottom: 22px;
+  }
+  ul {
+    margin-bottom: 22px;
+    li {
+      padding-bottom: 4px;
+      padding-top: 4px;
+      position: relative;
+      &::before {
+        content: '';
+        width: 17px;
+        height: 13px;
+        display: inline-block;
+        vertical-align: middle;
+        background: $url-1;
+        position: relative;
+        margin-right: 12px;
+      }
+    }
+  }
+  ol {
+    margin-bottom: 22px;
+    counter-reset: number;
+    li {
+      padding-left: 0;
+      margin-bottom: 8px;
+      &::before {
+        counter-increment: number;
+        content: '#' counter(number);
+        color: $c-rio-grande;
+        margin-right: 5px;
+      }
+    }
+  }
+  img {
+    margin-bottom: 22px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  *[class*='col'] {
+    margin-bottom: 22px;
+  }
+  h1 {
+    margin-bottom: 22px;
+    color: $c-tuatara;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 70px;
+    line-height: 70px;
+    a {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.15s;
+      &:hover {
+        color: $c-rio-grande;
+      }
+    }
+  }
+  h2 {
+    margin-bottom: 22px;
+    color: $c-tuatara;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 46px;
+    a {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.15s;
+      &:hover {
+        color: $c-rio-grande;
+      }
+    }
+  }
+  h3 {
+    margin-bottom: 22px;
+    color: $c-tuatara;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 34px;
+    a {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.15s;
+      &:hover {
+        color: $c-rio-grande;
+      }
+    }
+  }
+  h4 {
+    margin-bottom: 22px;
+    color: $c-tuatara;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    a {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.15s;
+      &:hover {
+        color: $c-rio-grande;
+      }
+    }
+  }
+  h5 {
+    margin-bottom: 22px;
+    color: $c-tuatara;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 22px;
+    a {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.15s;
+      &:hover {
+        color: $c-rio-grande;
+      }
+    }
+  }
+  h6 {
+    margin-bottom: 22px;
+    color: $c-tuatara;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 18px;
+    a {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.15s;
+      &:hover {
+        color: $c-rio-grande;
+      }
+    }
+  }
+  .embed-responsive {
+    margin-bottom: 22px;
+  }
+  .swiper-container {
+    margin-bottom: 22px;
+  }
+  br {
+    line-height: 1em;
+  }
+  *:last-child {
+    margin-bottom: 0;
+  }
+  a:not(.button):hover {
+    text-decoration: underline;
+  }
+}
+.grey {
+  color: $c-fuscous-gray;
+}
+.dark {
+  color: $c-tuatara;
+}
+.light {
+  &.transparent {
+    color: $white-80;
+  }
+  &.fulltransparent {
+    color: $white-50;
+  }
+}
+.color {
+  color: $c-rio-grande;
+}
+.blog-article {
+  img {
+    display: block;
+    margin-bottom: 1em;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  ul {
+    margin-bottom: 1em;
+  }
+  ol {
+    margin-bottom: 1em;
+  }
+  *[class*='col'] {
+    margin-bottom: 1em;
+  }
+}
+.h1 {
+  color: $c-tuatara;
+  font-weight: 900;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  font-size: 70px;
+  line-height: 70px;
+  &.light {
+    color: $white;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px 1px $black-10;
+  }
+  a {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.15s;
+    &:hover {
+      color: $c-rio-grande;
+    }
+  }
+}
+.h2 {
+  color: $c-tuatara;
+  font-weight: 900;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 46px;
+  &.light {
+    color: $white;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px 1px $black-10;
+  }
+  a {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.15s;
+    &:hover {
+      color: $c-rio-grande;
+    }
+  }
+}
+.h3 {
+  color: $c-tuatara;
+  font-weight: 900;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 34px;
+  &.light {
+    color: $white;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px 1px $black-10;
+  }
+  a {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.15s;
+    &:hover {
+      color: $c-rio-grande;
+    }
+  }
+}
+.h4 {
+  color: $c-tuatara;
+  font-weight: 900;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 24px;
+  &.light {
+    color: $white;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px 1px $black-10;
+  }
+  a {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.15s;
+    &:hover {
+      color: $c-rio-grande;
+    }
+  }
+}
+.h5 {
+  color: $c-tuatara;
+  font-weight: 900;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 22px;
+  &.light {
+    color: $white;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px 1px $black-10;
+  }
+  a {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.15s;
+    &:hover {
+      color: $c-rio-grande;
+    }
+  }
+}
+.h6 {
+  color: $c-tuatara;
+  font-weight: 900;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+  &.light {
+    color: $white;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px 1px $black-10;
+  }
+  a {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.15s;
+    &:hover {
+      color: $c-rio-grande;
+    }
+  }
+}
+.title-underline {
+  padding: 20px 0;
+  color: $c-fuego;
+  height: 21px;
+  &.light {
+    color: $white;
+  }
+  span {
+    width: 55px;
+    height: 1px;
+    background: currentColor;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    &::before {
+      width: 4px;
+      height: 1px;
+      background: inherit;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -9px;
+    }
+    &::after {
+      width: 4px;
+      height: 1px;
+      background: inherit;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -9px;
+      left: auto;
+      right: -9px;
+    }
+  }
+  &.left {
+    margin-left: 9px;
+    span:after {
+      display: none;
+    }
+  }
+  &.right {
+    margin-right: 9px;
+    span:before {
+      display: none;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .h1 {
+    font-size: 46px;
+    line-height: 46px;
+  }
+  .simple-article h1 {
+    font-size: 46px;
+    line-height: 46px;
+  }
+}
+.button {
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 1px 1px 2px $black-10;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+  &.noshadow {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    border: 1px $c-gallery solid;
+  }
+  &.block {
+    display: block;
+  }
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  span {
+    display: block;
+    position: relative;
+    left: 0;
+    &.icon {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.15s;
+    }
+    &.text {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s 0.05s;
+    }
+  }
+  &.size-1 {
+    font-size: 11px;
+    line-height: 18px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 20px;
+    .text {
+      padding: 12px 20px 10px;
+    }
+  }
+  &.size-2 {
+    font-size: 11px;
+    line-height: 18px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 25px;
+    .text {
+      padding: 17px 30px 15px;
+    }
+  }
+  &.style-1 {
+    background: $white;
+    color: $c-fuscous-gray;
+  }
+  &.style-2 {
+    background: $c-tuatara;
+    color: $white;
+  }
+  &.style-3 {
+    background: $c-rio-grande;
+    color: $white;
+    .icon {
+      color: $white;
+    }
+  }
+  &.style-4 {
+    color: $white;
+    .icon {
+      color: $white;
+    }
+  }
+  &.style-5 {
+    border: 1px $c-gallery solid;
+    color: $c-suva-gray;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    .icon {
+      color: $c-suva-gray;
+    }
+  }
+  &.facebook-button {
+    background: $c-azure;
+  }
+  &.twitter-button {
+    background: $c-shakespeare;
+  }
+  &.google-button {
+    background: $c-valencia;
+  }
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: inherit;
+    background: inherit;
+    content: '';
+    opacity: 0.3;
+  }
+  &:hover {
+    &::before {
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: scale(1.5);
+      opacity: 0;
+      visibility: hidden;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: transform 0.5s, opacity 0.5s, visibility 0s 0.5s;
+    }
+    .icon {
+      left: 50%;
+    }
+    .text {
+      left: 100%;
+    }
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    color: $c-rio-grande;
+    img {
+      display: block;
+      max-width: 30px;
+      height: auto;
+    }
+    .fa {
+      display: block;
+      line-height: inherit;
+    }
+  }
+}
+.button-wrapper {
+  display: block;
+  overflow: hidden;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: inherit;
+  position: relative;
+}
+.button-close {
+  display: inline-block;
+  vertical-align: middle;
+  background: $url-3 50% 50% no-repeat;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(0);
+    pointer-events: none;
+    background: $black;
+    opacity: 0.5;
+  }
+  &:hover:before {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(1.5);
+    opacity: 0;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: transform 0.5s, opacity 0.5s, visibility 0s 0.5s;
+  }
+}
+.buttons-wrapper {
+  font-size: 0;
+  margin: 0 -5px;
+  .button {
+    margin: 0 5px 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &::after {
+    display: block;
+    content: '';
+    margin-top: -10px;
+  }
+  .simple-article {
+    line-height: 24px;
+    margin: 13px 30px 10px 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.play-button {
+  width: 50px;
+  height: 50px;
+  background: $c-rio-grande;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50px;
+  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -25px 0 0 -25px;
+  &::before {
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: $c-rio-grande-30;
+    content: '';
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: inherit;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s;
+  }
+  &::after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 0 6.5px 9px;
+    border-color: transparent transparent transparent $white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -6.5px 0 0 -3px;
+    content: '';
+  }
+  &:hover:before {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(0.9);
+  }
+}
+.simple-input {
+  font-size: 14px;
+  color: $c-fuscous-gray;
+  height: 50px;
+  line-height: 48px;
+  padding: 0 30px;
+  width: 100%;
+  border: 1px $c-gallery solid;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 26px;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.15s;
+  background: $white;
+  &.small {
+    height: 40px;
+    line-height: 38px;
+    font-size: 11px;
+    padding: 0 18px;
+  }
+  &.style-1 {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    padding-left: 0;
+  }
+  &:focus {
+    border-color: $c-rio-grande;
+  }
+  &.invalid {
+    border-color: $c-valencia !important;
+  }
+  &.light {
+    border-color: $white-50;
+    color: $white;
+    background: transparent;
+    &:focus {
+      border-color: $white;
+    }
+  }
+}
+.SumoSelect {
+  &.open {
+    > .CaptionCont {
+      border-color: $c-rio-grande;
+    }
+    select.light + .CaptionCont {
+      border-color: $white;
+    }
+  }
+  > .CaptionCont {
+    font-size: 14px;
+    color: $c-fuscous-gray;
+    height: 50px;
+    line-height: 48px;
+    padding: 0 30px;
+    width: 100%;
+    border: 1px $c-gallery solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 26px;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.15s;
+    font-size: 14px;
+    > span.placeholder {
+      color: $c-suva-gray;
+    }
+  }
+  > select.small + .CaptionCont {
+    padding: 0 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    > label {
+      width: 40px;
+    }
+    > span {
+      padding-right: 20px;
+    }
+  }
+  select.light + .CaptionCont > span.placeholder {
+    color: $white-80;
+  }
+}
+input::-webkit-input-placeholder {
+  color: $c-suva-gray;
+  opacity: 1;
+}
+textarea::-webkit-input-placeholder {
+  color: $c-suva-gray;
+  opacity: 1;
+}
+input {
+  &:-moz-placeholder {
+    color: $c-suva-gray;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $c-suva-gray;
+    opacity: 1;
+  }
+  &.light::-webkit-input-placeholder {
+    color: $white-80;
+    opacity: 1;
+  }
+  &.light {
+    &:-moz-placeholder {
+      color: $white-80;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: $white-80;
+      opacity: 1;
+    }
+  }
+  &.light::-moz-placeholder {
+    color: $white-80;
+    opacity: 1;
+  }
+}
+textarea {
+  &:-moz-placeholder {
+    color: $c-suva-gray;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $c-suva-gray;
+    opacity: 1;
+  }
+  &.simple-input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 22px;
+    height: 140px;
+  }
+  &.light::-webkit-input-placeholder {
+    color: $white-80;
+    opacity: 1;
+  }
+  &.light {
+    &:-moz-placeholder {
+      color: $white-80;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: $white-80;
+      opacity: 1;
+    }
+  }
+  &.light::-moz-placeholder {
+    color: $white-80;
+    opacity: 1;
+  }
+}
+input::-moz-placeholder {
+  color: $c-suva-gray;
+  opacity: 1;
+}
+textarea::-moz-placeholder {
+  color: $c-suva-gray;
+  opacity: 1;
+}
+.single-line-form {
+  position: relative;
+  .button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.input-file-wrapper {
+  position: relative;
+  .simple-input {
+    color: $c-suva-gray;
+    padding-right: 50px;
+    &.light {
+      color: $white-80;
+    }
+  }
+  &.active {
+    .simple-input {
+      color: $c-fuscous-gray;
+      &.light {
+        color: $white;
+      }
+    }
+    .file-remove {
+      display: block;
+    }
+  }
+  .file-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: $url-3 center center;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0.5;
+    display: none;
+    &.light {
+      background-image: $url-4;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+form {
+  position: relative;
+}
+.submit-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  text-align: center;
+  color: $c-suva-gray;
+  cursor: pointer;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.3s;
+  &:hover {
+    color: $c-tuatara;
+  }
+  .fa {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+.checkbox-entry {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  min-width: 20px;
+  min-height: 20px;
+  input {
+    display: none;
+    &:checked + span:before {
+      border-color: $c-rio-grande;
+      background-color: $c-rio-grande;
+      background-position: center center;
+    }
+  }
+  span {
+    position: relative;
+    font-size: 11px;
+    line-height: 20px;
+    padding-left: 30px;
+    display: block;
+    color: $c-suva-gray;
+    text-transform: uppercase;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px $c-gallery solid;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 2px;
+      background: $url-5 100px center no-repeat $white;
+    }
+  }
+  &.radio {
+    span:before {
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 10px;
+      background: none;
+    }
+    input:checked + span:before {
+      border-color: $c-rio-grande;
+      background-color: $white;
+      border-width: 7px;
+    }
+  }
+  &.light {
+    span {
+      color: $white-80;
+    }
+    &:hover span {
+      color: $white;
+    }
+    &.radio input:checked + span:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px $c-gallery solid;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 10px;
+    }
+  }
+  &:hover span {
+    color: $c-fuscous-gray;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  &.checkbox-toggle-title span {
+    color: $c-tuatara;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+}
+.checkbox-toggle-wrapper {
+  display: none;
+}
+.ClassyCountdown-wrapper {
+  margin: 0 -5px;
+  > div {
+    display: inline-block;
+    position: relative;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .ClassyCountdown-value {
+    width: 100%;
+    line-height: 1em;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 0;
+    display: block;
+    span {
+      display: block;
+    }
+  }
+}
+.countdown {
+  &.max-width {
+    max-width: 400px;
+  }
+  &.light .ClassyCountdown-wrapper .ClassyCountdown-value span {
+    color: $white-80 !important;
+  }
+  &.light-green .ClassyCountdown-wrapper .ClassyCountdown-value span {
+    color: $white-80 !important;
+  }
+}
+.follow {
+  font-size: 0;
+  margin-bottom: -7px;
+  .title {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: $white;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 35px;
+    vertical-align: top;
+    margin-right: 20px;
+  }
+  &.light {
+    .title {
+      color: $c-tuatara;
+    }
+    .entry {
+      background: $c-black-haze;
+    }
+  }
+  .entry {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    vertical-align: bottom;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    background: $c-cape-cod;
+    color: $c-suva-gray;
+    font-size: 14px;
+    margin: 0 7px 7px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.15s;
+    &:hover {
+      color: $white;
+      &::before {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1);
+      }
+    }
+    .fa {
+      display: block;
+      line-height: inherit;
+      position: relative;
+    }
+    &::before {
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      content: '';
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 50%;
+      background: $c-rio-grande;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: scale(0);
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.15s;
+    }
+  }
+}
+.tags {
+  .title {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: $white;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 35px;
+    vertical-align: top;
+    margin-right: 20px;
+  }
+  &.light .title {
+    color: $c-tuatara;
+  }
+}
+html.overflow-hidden body {
+  overflow: hidden;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.SlectBox.small + .CaptionCont {
+  height: 42px;
+  line-height: 40px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 21px;
+}
+select.light + .CaptionCont {
+  background: transparent;
+  border-color: $white-50;
+  color: $white;
+  input::-webkit-input-placeholder {
+    color: $white-80;
+    opacity: 1;
+  }
+  input {
+    &:-moz-placeholder {
+      color: $white-80;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: $white-80;
+      opacity: 1;
+    }
+  }
+  input::-moz-placeholder {
+    color: $white-80;
+    opacity: 1;
+  }
+}

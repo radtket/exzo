@@ -1,0 +1,195 @@
+//colors
+$c-tuatara: #343434;
+$white-5: rgba(255, 255, 255, 0.05);
+$white-50: rgba(255, 255, 255, 0.5);
+$c-rio-grande: #b8cd06;
+$white-80: rgba(255, 255, 255, 0.8);
+$c-cape-cod: #424242;
+$c-black-haze: #f7f7f7;
+$c-suva-gray: #888;
+$white: #fff;
+
+footer {
+  background: $c-tuatara;
+  position: relative;
+  a {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.15s;
+  }
+  .follow {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+.tag {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.15s;
+  font-family: Raleway, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  line-height: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white-50;
+  background: $c-cape-cod;
+  padding: 10px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 17px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px 10px 0;
+  &:hover {
+    background: $c-rio-grande;
+    color: $white;
+  }
+}
+.footer-top {
+  border-bottom: 1px $white-5 solid;
+  padding: 60px 0;
+}
+.footer-bottom {
+  padding: 30px 0;
+}
+.footer-contact {
+  font-family: Raleway, sans-serif;
+  font-size: 10px;
+  line-height: 28px;
+  color: $white-50;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    font-family: Questrial, sans-serif;
+    color: $white-80;
+    font-weight: 400;
+    &:hover {
+      color: $c-rio-grande;
+    }
+  }
+  .fa {
+    color: $c-rio-grande;
+    font-size: 20px;
+    width: 22px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+.footer-post-preview {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .image {
+    float: left;
+    width: 70px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 5px;
+    overflow: hidden;
+    background: $c-rio-grande;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 5px;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.15s;
+    }
+    &:hover img {
+      opacity: 0.5;
+    }
+  }
+  .description {
+    margin-left: 80px;
+    padding-top: 5px;
+  }
+  .date {
+    font-size: 10px;
+    line-height: 16px;
+    color: $white-50;
+    text-transform: uppercase;
+  }
+  .title {
+    font-family: Raleway, sans-serif;
+    font-size: 11px;
+    line-height: 14px;
+    color: $white-80;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:hover {
+      color: $c-rio-grande;
+    }
+  }
+}
+.tags {
+  font-size: 0;
+  &::after {
+    margin-top: -10px;
+  }
+}
+.copyright {
+  font-size: 13px;
+  line-height: 19px;
+  padding: 8px 0;
+  color: $white-50;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 50px;
+  a {
+    color: $c-rio-grande;
+    &:hover {
+      color: $c-rio-grande;
+    }
+  }
+}
+.footer-payment-icons {
+  font-size: 0;
+  margin: 0 -7px -7px;
+  padding-top: 5px;
+  .entry {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 7px 7px;
+    img {
+      display: block;
+    }
+  }
+}
+.footer-form-block {
+  background: $c-rio-grande;
+  padding: 40px 0;
+}
+@media (max-width: 767px) {
+  .footer-top {
+    padding: 30px 0;
+  }
+  .copyright {
+    margin: 0 0 10px 0;
+    display: block;
+  }
+}
+.footer-column-links a {
+  font-size: 11px;
+  color: $white-50;
+  text-transform: uppercase;
+  display: block;
+  line-height: 22px;
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    color: $c-rio-grande;
+  }
+}
+.light .tag {
+  background: $c-black-haze;
+  color: $c-suva-gray;
+}

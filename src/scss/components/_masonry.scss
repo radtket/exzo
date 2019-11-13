@@ -1,0 +1,190 @@
+//colors
+$white: #fff;
+$c-rio-grande: #b8cd06;
+$c-black-haze-95: rgba(247, 247, 247, 0.95);
+
+.grid-sizer {
+  width: 25%;
+}
+.grid {
+  position: relative;
+  margin: -15px -15px 0 -15px;
+}
+.grid-item {
+  &.w25 {
+    width: 25%;
+  }
+  &.w50 {
+    width: 50%;
+  }
+}
+.gallery-grid-item {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border: 15px $white solid;
+  }
+  img {
+    display: block;
+    width: 100%;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s;
+  }
+  &.style-1 {
+    &:hover {
+      img {
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all 0.3s 0.15s;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(100px);
+      }
+      .gallery-title {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(0%);
+      }
+    }
+    .gallery-title {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      right: 15px;
+      background: $c-rio-grande;
+      padding: 22px 30px;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translateY(-100%);
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+      min-height: 100px;
+    }
+  }
+  &.style-2 {
+    .gallery-title {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: $c-black-haze-95;
+      opacity: 0;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s 0.15s;
+      .left {
+        position: absolute;
+        left: 45px;
+        right: 45px;
+        top: 50%;
+        margin-top: -20px;
+        opacity: 0;
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all 0.3s;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateX(-100%);
+      }
+      .right {
+        position: absolute;
+        top: 35px;
+        right: 45px;
+        left: 45px;
+        text-align: right;
+        opacity: 0;
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all 0.3s;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateX(100%);
+      }
+    }
+    &:hover .gallery-title {
+      opacity: 1;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+      .left,
+      .right {
+        opacity: 1;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateX(0%);
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all 0.3s 0.15s;
+      }
+    }
+  }
+}
+.gallery-grid-link {
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .grid-item.w25 {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .grid {
+    margin: 0;
+  }
+  .gallery-grid-item {
+    .gallery-title {
+      display: none;
+    }
+    &.style-1:hover img {
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: none;
+    }
+  }
+  .gallery-popup-description {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 450px) {
+  .grid-item {
+    &.w25 {
+      width: 100%;
+    }
+    &.w50 {
+      width: 100%;
+    }
+  }
+  .gallery-grid-item {
+    margin-bottom: 15px;
+    &::after {
+      display: none;
+    }
+  }
+}
+.gallery-big-preview-entry {
+  padding-bottom: 61%;
+  background-size: cover;
+  background-position: center center;
+}
+@media (min-width: 1200px) {
+  .gallery-popup-slider-wrapper {
+    .swiper-button-prev {
+      left: -100px;
+    }
+    .swiper-button-next {
+      right: -100px;
+    }
+  }
+}
+.gallery-popup-description {
+  padding: 40px 50px;
+}
+.popup-content .slider-wrapper {
+  background: transparent;
+}
+.gallery-small-preview-entry img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.2;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.3s;
+}
+.swiper-slide-active .gallery-small-preview-entry img {
+  opacity: 0.5;
+}
