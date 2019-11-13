@@ -1,5 +1,10 @@
 @import './variables';
 @import './reset';
+
+// Bootstrap
+@import './vendor/bootstrap';
+@import './vendor/bootstrap-extension';
+
 @import './components/global';
 @import './components/popups';
 @import './components/swiper';
@@ -25,3 +30,7 @@
 @import './components/pages/checkout';
 @import './components/pages/cart';
 @import './components/pages/blog';
+
+// Vendor
+@import './vendor/sumo-select';
+@import './vendor/swipper';

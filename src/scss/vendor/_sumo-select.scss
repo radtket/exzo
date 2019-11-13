@@ -1,0 +1,455 @@
+.SumoSelect p {
+  margin: 0;
+}
+
+.sumoStopScroll {
+  overflow: hidden;
+}
+
+/* Filtering style */
+.SumoSelect {
+  .hidden {
+    display: none;
+  }
+
+  .search-txt {
+    display: none;
+    outline: none;
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: inherit;
+    color: inherit;
+    border: 1px transparent solid;
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+  }
+
+  .no-match {
+    display: none;
+  }
+
+  &.open {
+    .search-txt {
+      display: block;
+    }
+
+    > .search > {
+      span,
+      label {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+/*this is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties. */
+.SelectClass,
+.SumoUnder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter: alpha(opacity = 0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+.SelectClass {
+  z-index: 1;
+}
+
+.SumoSelect {
+  > {
+    .optWrapper > .options li.opt label,
+    .CaptionCont {
+      user-select: none;
+      -o-user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+    }
+  }
+
+  .select-all > label {
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+  }
+
+  position: relative;
+  outline: none;
+
+  &:focus > .CaptionCont,
+  &:hover > .CaptionCont {
+  }
+
+  &.open {
+    > .CaptionCont {
+    }
+
+    > .optWrapper {
+      top: 100%;
+      display: block;
+
+      &.up {
+        top: auto;
+        bottom: 100%;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  > {
+    .CaptionCont {
+      position: relative;
+      background-color: #fff;
+      margin: 0;
+      cursor: pointer;
+
+      > {
+        span {
+          display: block;
+          padding-right: 30px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        label {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 50px;
+          cursor: pointer;
+
+          > i {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: url(../img/icon-7.png) center center no-repeat;
+          }
+        }
+      }
+    }
+
+    select.light + .CaptionCont > label > i {
+      background-image: url(../img/icon-8.png);
+    }
+
+    .optWrapper {
+      display: none;
+      z-index: 1000;
+      top: 30px;
+      position: absolute;
+      left: 21px;
+      right: 21px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background: #fff;
+      overflow: hidden;
+      border-radius: 0 0 5px 5px;
+      -webkit-border-radius: 0 0 5px 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  > .optWrapper {
+    ul {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 0;
+      overflow: auto;
+    }
+
+    > .options {
+      position: relative;
+
+      /*Set the height of pop up here (only for desktop mode)*/
+      max-height: 250px;
+
+      /*height*/
+
+      li {
+        &.group.disabled > label {
+          opacity: 0.5;
+        }
+
+        ul li.opt {
+          padding-left: 22px;
+        }
+      }
+    }
+
+    &.multiple > .options li ul li.opt {
+      padding-left: 50px;
+    }
+
+    &.isFloating > .options {
+      max-height: 100%;
+    }
+
+    > .options li.opt {
+      line-height: 20px;
+      padding: 5px 15px;
+      font-size: 12px;
+      color: #555;
+      cursor: pointer;
+    }
+  }
+
+  .no-match {
+    line-height: 20px;
+    padding: 5px 15px;
+    font-size: 12px;
+    color: #555;
+    cursor: pointer;
+  }
+
+  > .optWrapper {
+    > .options li {
+      &.opt {
+        &:hover,
+        &.selected:not(.disabled) {
+          background-color: #b8cd06;
+          color: #fff;
+        }
+      }
+
+      label {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        cursor: pointer;
+      }
+
+      span {
+        display: none;
+      }
+
+      &.group > label {
+        cursor: default;
+        padding: 8px 6px;
+        font-weight: bold;
+      }
+    }
+
+    &.isFloating {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 90%;
+      bottom: 0;
+      margin: auto;
+      max-height: 90%;
+    }
+
+    > .options li.opt.disabled {
+      background-color: inherit;
+      pointer-events: none;
+
+      * {
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
+
+        /* IE 5-7 */
+
+        filter: alpha(opacity = 50);
+
+        /* Netscape */
+
+        -moz-opacity: 0.5;
+
+        /* Safari 1.x */
+
+        -khtml-opacity: 0.5;
+
+        /* Good browsers */
+
+        opacity: 0.5;
+      }
+    }
+
+    &.multiple > .options li.opt {
+      padding-left: 35px;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        display: block;
+        width: 30px;
+        top: 0;
+        bottom: 0;
+        margin-left: -35px;
+      }
+    }
+  }
+
+  .select-all {
+    > span {
+      position: absolute;
+      display: block;
+      width: 30px;
+      top: 0;
+      bottom: 0;
+      margin-left: -35px;
+    }
+
+    > span i {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #aeaeae;
+      background-color: #fff;
+    }
+
+    &.selected > span i,
+    &.partial > span i {
+      background-color: rgb(17, 169, 17);
+      border-color: transparent;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAABMSURBVAiZfc0xDkAAFIPhd2Kr1WRjcAExuIgzGUTIZ/AkImjSofnbNBAfHvzAHjOKNzhiQ42IDFXCDivaaxAJd0xYshT3QqBxqnxeHvhunpu23xnmAAAAAElFTkSuQmCC');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  > .optWrapper.multiple > .options li.opt span i {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aeaeae;
+    background-color: #fff;
+  }
+
+  > .optWrapper {
+    > .MultiControls {
+      display: none;
+      border-top: 1px solid #ddd;
+      background-color: #fff;
+    }
+
+    &.multiple {
+      &.isFloating > .MultiControls {
+        display: block;
+        margin-top: 5px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      &.okCancelInMulti > .MultiControls {
+        display: block;
+
+        > p {
+          padding: 6px;
+        }
+      }
+
+      > .MultiControls > p {
+        display: inline-block;
+        cursor: pointer;
+        padding: 12px;
+        width: 50%;
+        box-sizing: border-box;
+        text-align: center;
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+
+        &.btnOk {
+          border-right: 1px solid #dbdbdb;
+        }
+
+        &.btnCancel {
+        }
+      }
+    }
+
+    &.isFloating > .options li.opt {
+      padding: 12px 6px;
+    }
+
+    &.multiple {
+      &.isFloating {
+        > .options li.opt {
+          padding-left: 35px;
+        }
+
+        padding-bottom: 43px;
+      }
+
+      > .options li.opt.selected span i {
+        background-color: rgb(17, 169, 17);
+        border-color: transparent;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAABMSURBVAiZfc0xDkAAFIPhd2Kr1WRjcAExuIgzGUTIZ/AkImjSofnbNBAfHvzAHjOKNzhiQ42IDFXCDivaaxAJd0xYshT3QqBxqnxeHvhunpu23xnmAAAAAElFTkSuQmCC');
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+
+  &.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+
+    > .CaptionCont {
+      border-color: #ccc;
+    }
+  }
+
+  .select-all {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    padding: 8px 0 3px 35px;
+    height: 20px;
+    cursor: pointer;
+
+    > {
+      label,
+      span i {
+        cursor: pointer;
+      }
+    }
+
+    &.partial > span i {
+      background-color: #ccc;
+    }
+  }
+
+  > .optWrapper > .options li.optGroup {
+    padding-left: 5px;
+    text-decoration: underline;
+  }
+}
