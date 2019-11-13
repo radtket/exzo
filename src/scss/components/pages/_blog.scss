@@ -1,6 +1,7 @@
 .comments-wrapper {
   margin-left: -100px;
 }
+
 .comment-entry {
   position: relative;
   padding-left: 100px;
@@ -11,20 +12,24 @@
     height: auto;
     border-radius: 25px;
   }
+
   .content {
     margin: 0 100px 23px 70px;
     padding-top: 5px;
   }
+
   .button {
     position: absolute;
     right: 0;
     top: 5px;
   }
 }
+
 @media (max-width: 767px) {
   .comments-wrapper {
     margin-left: 0;
   }
+
   .comment-entry {
     padding-left: 0;
   }

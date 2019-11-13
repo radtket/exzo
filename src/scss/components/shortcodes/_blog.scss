@@ -14,54 +14,65 @@ $url-0: url(http://unionagency.one/exzo/img/icon-30.png);
     margin: 0 auto;
     display: inline-block;
     margin: 0 5px 10px;
+
     .description {
       background: $white;
       padding: 25px 20px;
     }
+
     .preview img {
       display: block;
       width: 100%;
       height: auto;
     }
   }
+
   &.style-2 {
     .preview {
       display: block;
       max-width: 270px;
       margin-bottom: 15px;
       position: relative;
+
       img {
         display: block;
         max-width: 100%;
         height: auto;
       }
     }
+
     .title {
       margin-bottom: 10px;
     }
   }
+
   &.style-3 {
     &::after {
       content: '';
       clear: both;
       display: block;
     }
+
     .preview {
       display: block;
       position: relative;
       margin-bottom: 30px;
+
       img {
         display: block;
         max-width: 100%;
         height: auto;
       }
+
       .swiper-button-next {
         right: 30px;
       }
+
       .swiper-button-prev {
         left: 30px;
       }
     }
+
     .date {
       float: left;
       width: 70px;
@@ -70,6 +81,7 @@ $url-0: url(http://unionagency.one/exzo/img/icon-30.png);
       line-height: 16px;
       color: $c-suva-gray;
       text-transform: uppercase;
+
       span {
         display: block;
         font-size: 30px;
@@ -78,44 +90,54 @@ $url-0: url(http://unionagency.one/exzo/img/icon-30.png);
         margin-bottom: 5px;
       }
     }
+
     .content {
       margin-left: 100px;
     }
+
     .title {
       margin-bottom: 15px;
     }
+
     .description {
       margin-bottom: 15px;
     }
+
     .description-article {
       margin-bottom: 20px;
     }
   }
 }
+
 .blog-comments {
   font-size: 11px;
   line-height: 24px;
   color: $c-fuscous-gray;
   margin-bottom: 5px;
+
   .fa {
     margin-right: 3px;
   }
 }
+
 .blog-blockquote {
   background: $c-tuatara;
   text-align: center;
+
   .cell-view {
     height: 300px;
     display: table-cell;
     vertical-align: middle;
     padding: 30px 15px;
   }
+
   blockquote {
     max-width: 640px;
     margin: 0 auto;
     padding-top: 40px;
     background: $url-0 center top no-repeat;
   }
+
   .blockquote-title {
     font-family: Raleway, sans-serif;
     font-size: 18px;
@@ -125,6 +147,7 @@ $url-0: url(http://unionagency.one/exzo/img/icon-30.png);
     font-weight: 700;
     margin-bottom: 15px;
   }
+
   .blockquote-author {
     font-family: Raleway, sans-serif;
     font-size: 13px;
@@ -134,6 +157,7 @@ $url-0: url(http://unionagency.one/exzo/img/icon-30.png);
     font-weight: 900;
     margin-bottom: 5px;
   }
+
   .blockquote-position {
     text-transform: uppercase;
     font-size: 11px;
@@ -141,6 +165,7 @@ $url-0: url(http://unionagency.one/exzo/img/icon-30.png);
     color: $white-50;
   }
 }
+
 @media (max-width: 767px) {
   .blog-shortcode.style-3 {
     .date {
@@ -148,6 +173,7 @@ $url-0: url(http://unionagency.one/exzo/img/icon-30.png);
       margin-bottom: 5px;
       text-align: left;
     }
+
     .content {
       margin-left: 0;
     }

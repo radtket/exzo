@@ -9,7 +9,6 @@ $black-70: rgba(0, 0, 0, 0.7);
 $c-gallery: #eee;
 $c-fuscous-gray: #555;
 $wild-sand: #f4f4f4;
-
 //urls
 $url-0: url(http://unionagency.one/exzo/img/icon-7.png);
 
@@ -20,32 +19,38 @@ header {
   width: 100%;
   z-index: 10;
 }
+
 @media (min-width: 992px) {
   header {
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.15s;
+
     &.scrolled {
       top: -60px;
     }
   }
+
   .nav-wrapper {
     height: inherit;
     display: inline-block;
     vertical-align: top;
   }
+
   nav {
     height: inherit;
+
     a {
-      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
       transition: all 0.3s;
     }
+
     > ul {
       height: inherit;
+
       > li {
         position: relative;
         display: inline-block;
         vertical-align: top;
         height: inherit;
+
         > a {
           font-size: 11px;
           line-height: 16px;
@@ -54,38 +59,37 @@ header {
           text-transform: uppercase;
           padding: 9px 20px 7px;
           display: block;
-          //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
           border-radius: 16px;
           position: relative;
           top: 50%;
           margin-top: -16px;
+
           &:hover {
             background-color: $c-rio-grande;
-            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
             box-shadow: 1px 1px 2px $black-10;
             color: $white;
           }
         }
+
         > ul {
-          //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
           transform: translateY(-100%);
-          //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
           transition: all 0.3s;
           opacity: 0;
         }
+
         &.active > a {
           background-color: $c-rio-grande;
-          //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
           box-shadow: 1px 1px 2px $black-10;
           color: $white;
         }
+
         &:hover > ul {
-          //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
           transform: translateY(0%);
           opacity: 1;
         }
       }
     }
+
     ul ul {
       display: block !important;
       position: absolute;
@@ -96,15 +100,15 @@ header {
       z-index: -1;
       padding: 10px 0;
       text-align: left;
-      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
       box-shadow: 0 1px 3px $black-10;
-      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
       border-radius: 0 0 5px 5px;
+
       li {
         padding: 0 20px 0 19px;
         position: relative;
         left: 1px;
       }
+
       a {
         font-size: 10px;
         text-transform: uppercase;
@@ -113,42 +117,44 @@ header {
         line-height: 16px;
         display: block;
         padding: 8px 0;
+
         &:hover {
           color: $c-rio-grande;
         }
       }
+
       > li {
         &.active > a {
           color: $c-rio-grande;
         }
+
         &:hover ul {
-          //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
           transform: perspective(1000px) rotateY(0deg);
           opacity: 1;
         }
       }
+
       ul {
         left: 100%;
         top: 0;
         z-index: 0;
-        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
         border-radius: 5px;
-        //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
         transform-origin: 0 50%;
-        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
         transform: perspective(1000px) rotateY(90deg);
         opacity: 0;
-        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
         transition: all 0.3s;
       }
     }
   }
+
   .navigation-title {
     display: none;
   }
+
   .megamenu-wrapper {
     position: static;
   }
+
   .megamenu {
     position: absolute;
     width: 950px;
@@ -156,18 +162,19 @@ header {
     top: 100%;
     height: 540px;
     background: $white;
-    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
     box-shadow: 0 5px 5px $black-10;
     margin-top: -1px;
     z-index: -1;
     border-top: 5px $c-rio-grande solid;
     padding: 30px;
     display: block !important;
+
     .links {
       float: left;
       width: 220px;
       height: 480px;
       overflow: auto;
+
       a {
         font-size: 10px;
         color: $c-suva-gray;
@@ -178,25 +185,28 @@ header {
         margin-bottom: 15px;
         text-transform: uppercase;
         text-align: left;
-        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
         transition: all 0.15s;
+
         &:hover {
           color: $c-rio-grande;
         }
+
         &.active {
           color: $c-rio-grande;
         }
+
         &:last-child {
           margin-bottom: 0;
         }
       }
     }
+
     .content {
       margin-left: 220px;
     }
   }
+
   .megamenu-banner {
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 10px;
     height: inherit;
     position: relative;
@@ -204,6 +214,7 @@ header {
     background-position: center center;
     padding: 30px;
     text-align: center;
+
     &::before {
       position: absolute;
       left: 0;
@@ -212,45 +223,51 @@ header {
       height: 100%;
       background: $black-40;
       content: '';
-      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
       border-radius: inherit;
     }
   }
 }
+
 .header-empty-space {
   height: 159px;
 }
+
 .header-top {
   font-size: 0;
   background: $white;
   height: 60px;
   border-bottom: 1px $c-gallery solid;
+
   a {
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.15s;
+
     .fa {
-      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
       transition: all 0.15s;
     }
+
     b {
-      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
       transition: all 0.15s;
     }
+
     &:hover {
       color: $c-rio-grande;
+
       .fa {
         color: $c-rio-grande;
       }
+
       b {
         color: $c-rio-grande;
       }
     }
   }
+
   b {
     font-family: Raleway, sans-serif;
     font-weight: 700;
     color: $c-fuscous-gray;
   }
+
   .entry {
     display: inline-block;
     vertical-align: bottom;
@@ -264,6 +281,7 @@ header {
     text-transform: uppercase;
     position: relative;
   }
+
   .fa {
     font-size: 20px;
     display: inline-block;
@@ -272,32 +290,36 @@ header {
     position: relative;
     top: -1px;
   }
+
   .cart-title {
     font-size: 13px;
     color: $c-rio-grande;
   }
+
   .cart-icon {
     position: relative;
     display: inline-block;
     padding: 0 12px 0 3px;
   }
+
   .language {
     cursor: pointer;
+
     .title {
       padding-right: 15px;
       width: 35px;
       background: $url-0 right center no-repeat;
       text-align: left;
     }
+
     &:hover .language-toggle {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: scale(1);
       opacity: 1;
       left: 0;
-      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
       transition: transform 0.3s, opacity 0.3s, left 0s;
     }
   }
+
   .language-toggle {
     position: absolute;
     left: 0;
@@ -306,28 +328,26 @@ header {
     background: $white;
     padding: 10px 0;
     z-index: 1;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 0 0 5px 5px;
-    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
     box-shadow: 0 1px 3px $black-10;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: scale(0.8);
     opacity: 0;
     left: 10000px;
-    //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
     transform-origin: 50% 0;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: transform 0.3s, opacity 0.3s, left 0s 0.3s;
+
     a {
       display: block;
       padding: 5px 25px;
       text-align: left;
+
       &:hover {
         background: $c-rio-grande;
         color: $white;
       }
     }
   }
+
   .cart-toggle {
     position: absolute;
     right: 0;
@@ -336,35 +356,31 @@ header {
     padding: 30px 30px 40px 30px;
     width: 670px;
     background: $white;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 0 0 5px 5px;
-    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
     box-shadow: 0 5px 5px $black-10;
     text-align: left;
     cursor: auto;
     margin-top: -1px;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: scale(0.8);
     opacity: 0;
     right: -10000px;
-    //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
     transform-origin: 100% 0;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: transform 0.3s, opacity 0.3s, right 0s 0.3s;
     border-top: 5px $c-rio-grande solid;
   }
+
   .cart {
     cursor: pointer;
+
     &:hover .cart-toggle {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: scale(1);
       opacity: 1;
       right: 0;
-      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
       transition: transform 0.3s, opacity 0.3s, right 0s;
     }
   }
 }
+
 #logo {
   display: inline-block;
   vertical-align: top;
@@ -372,146 +388,171 @@ header {
   position: relative;
   top: 50%;
   margin-top: -30px;
+
   img {
     display: block;
     max-height: 100%;
     width: auto;
   }
 }
+
 .cart-label {
   position: absolute;
   right: 2px;
   top: -10px;
   width: 20px;
   height: 20px;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 50%;
   background: $c-rio-grande;
   color: $white;
   font-size: 11px;
   line-height: 20px;
   text-align: center;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   box-shadow: 1px 1px 2px $black-10;
 }
+
 .cart-entry {
   background: $wild-sand;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 5px;
   padding: 30px;
   margin-bottom: 1px;
+
   table {
     width: 100%;
+
     td {
       vertical-align: middle;
       padding: 0 30px;
       border-left: 1px $white solid;
+
       &:first-child {
         text-align: left;
         padding-left: 0;
         border: none;
       }
+
       &:last-child {
         padding-right: 0;
       }
+
       &:nth-child(1) {
         width: 145px;
       }
+
       &:nth-child(2) {
         width: 140px;
       }
+
       &:nth-child(3) {
         width: 70px;
       }
     }
   }
 }
+
 .cart-color {
   width: 12px;
   height: 12px;
   display: inline-block;
 }
+
 .cart-entry-thumbnail {
   float: left;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: all 0.15s;
+
   img {
     display: block;
   }
+
   &:hover {
     opacity: 0.8;
   }
 }
+
 .cart-entry-description {
   margin-left: 105px;
   padding-top: 22px;
 }
+
 .megamenu {
-  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
   transform: scale(0.8);
   opacity: 0;
   right: -10000px;
-  //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
   transform-origin: 100% 0;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: transform 0.3s, opacity 0.3s, right 0s 0.3s;
   border-top: 5px $c-rio-grande solid;
 }
+
 .cart-overflow {
   max-height: 460px;
   overflow: auto;
 }
+
 @media (max-width: 767px) {
   .cart-entry {
     text-align: center;
   }
+
   .cart-entry-thumbnail {
     float: none;
     display: inline-block;
     vertical-align: top;
   }
+
   .cart-entry-description {
     margin-left: 0;
+
     table {
       display: block;
+
       tbody {
         display: block;
       }
+
       tr {
         display: block;
       }
+
       td {
         display: block;
         text-align: center !important;
         padding: 0 0 10px 0;
         border: none;
         width: auto !important;
+
         &:last-child {
           padding-bottom: 0;
         }
       }
     }
   }
+
   .header-top {
     height: 40px;
+
     .entry {
       padding: 10px 15px;
     }
   }
+
   #logo {
     height: 40px;
     margin-top: -20px;
   }
+
   .header-bottom {
     height: 60px;
   }
+
   .header-search-content {
     padding-bottom: 15px;
   }
+
   .header-empty-space {
     height: 100px;
   }
 }
+
 .hamburger-icon {
   width: 40px;
   height: 40px;
@@ -521,76 +562,88 @@ header {
   margin-top: -20px;
   cursor: pointer;
   display: none;
+
   span {
     position: absolute;
     width: 100%;
     right: 0;
     height: 4px;
     background: $c-tuatara;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 2px;
+
     &:nth-child(1) {
       top: 7px;
     }
+
     &:nth-child(2) {
       top: 50%;
       margin-top: -2px;
       width: 70%;
     }
+
     &:nth-child(3) {
       bottom: 7px;
       width: 90%;
     }
   }
+
   &.active span {
     height: 2px;
+
     &:nth-child(1) {
       display: none;
     }
+
     &:nth-child(2) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(-45deg);
       width: 70%;
       left: 15%;
       margin-top: -1px;
     }
+
     &:nth-child(3) {
       bottom: auto;
       top: 50%;
       margin-top: -1px;
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(45deg);
       width: 70%;
       left: 15%;
     }
   }
 }
+
 .header-bottom {
   height: 98px;
   background: $white;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   box-shadow: 0 1px 3px $black-10;
   font-size: 0;
+
   *[class*='col'] {
     height: inherit;
   }
+
   .row {
     height: inherit;
   }
+
   .container {
     height: inherit;
   }
+
   .container-fluid {
     height: inherit;
   }
+
   .content-margins {
     height: inherit;
   }
 }
+
 @media (max-width: 991px) {
   .hamburger-icon {
     display: block;
   }
+
   .nav-wrapper {
     position: fixed;
     left: 100%;
@@ -599,21 +652,22 @@ header {
     width: 100%;
     text-align: left;
     z-index: 10;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0s 0.3s;
+
     &.active {
       left: 0;
-      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
       transition: all 0s 0s;
+
       .nav-close-layer {
         opacity: 1;
       }
+
       nav {
-        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
         transform: translateX(0%);
       }
     }
   }
+
   nav {
     position: absolute;
     width: 300px;
@@ -621,17 +675,18 @@ header {
     bottom: 0;
     background: $white;
     right: 0;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: translateX(100%);
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.3s;
+
     li {
       position: relative;
     }
+
     a {
       display: block;
       position: relative;
     }
+
     > ul {
       position: absolute;
       top: 150px;
@@ -640,8 +695,10 @@ header {
       width: 100%;
       overflow: auto;
       padding: 15px;
+
       > li {
         margin-bottom: 10px;
+
         > a {
           font-size: 12px;
           line-height: 16px;
@@ -650,33 +707,37 @@ header {
           text-transform: uppercase;
           padding: 12px 45px 10px 20px;
           display: block;
-          //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
           border-radius: 19px;
-          //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
           box-shadow: 1px 1px 2px $black-10;
         }
+
         &.active {
           > a {
             background-color: $c-rio-grande;
             color: $white;
           }
+
           > .menu-toggle {
             color: $white;
           }
         }
+
         > ul > li {
           > a {
             padding-right: 45px;
           }
+
           &.active > .menu-toggle {
             color: $c-rio-grande;
           }
         }
       }
     }
+
     ul ul {
       display: none;
       padding-left: 30px;
+
       a {
         font-size: 11px;
         text-transform: uppercase;
@@ -686,10 +747,12 @@ header {
         display: block;
         padding: 12px 0 10px;
       }
+
       ul a {
         font-size: 11px;
         padding: 8px 0;
         position: relative;
+
         &::before {
           width: 10px;
           content: '';
@@ -702,11 +765,13 @@ header {
           position: relative;
         }
       }
+
       > li.active > a {
         color: $c-rio-grande;
       }
     }
   }
+
   .nav-close-layer {
     position: absolute;
     left: 0;
@@ -714,10 +779,10 @@ header {
     width: 100%;
     height: 100%;
     background: $black-70;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.3s;
     opacity: 0;
   }
+
   .menu-toggle {
     position: absolute;
     width: 39px;
@@ -726,6 +791,7 @@ header {
     top: 0;
     cursor: pointer;
     color: $c-suva-gray;
+
     &::before {
       width: 19px;
       height: 1px;
@@ -735,6 +801,7 @@ header {
       position: absolute;
       background: currentColor;
     }
+
     &::after {
       width: 1px;
       height: 19px;
@@ -743,14 +810,15 @@ header {
       content: '';
       position: absolute;
       background: currentColor;
-      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
       transition: all 0.3s;
     }
+
     &.active:after {
       height: 0;
       top: 19px;
     }
   }
+
   .navigation-title {
     display: block;
     position: absolute;
@@ -768,18 +836,19 @@ header {
     color: $c-tuatara;
     padding-right: 40px;
   }
+
   .megamenu {
     display: none;
     border: none;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: none;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: none;
     opacity: 1;
     right: auto;
+
     .content {
       display: none;
     }
+
     .links a {
       font-size: 11px;
       text-transform: uppercase;
@@ -788,23 +857,28 @@ header {
       line-height: 16px;
       display: block;
       padding: 12px 0 10px 30px;
+
       &.active {
         color: $c-rio-grande;
       }
     }
   }
+
   .header-bottom-icon {
     font-size: 27px;
     width: 50px;
   }
+
   .header-search-content {
     padding: 40px 0;
   }
+
   .header-top .entry {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
+
 .header-bottom-icon {
   width: 40px;
   height: 40px;
@@ -816,42 +890,43 @@ header {
   position: relative;
   top: 50%;
   margin-top: -20px;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: all 0.15s;
   cursor: pointer;
+
   &:hover {
     color: $c-rio-grande;
   }
 }
+
 .header-search-wrapper {
   position: relative;
   z-index: -1;
+
   .button-close {
     position: absolute;
     top: 5px;
     right: 5px;
   }
+
   &.active .header-search-content {
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: translateY(0%);
     opacity: 1;
   }
 }
+
 .header-search-content {
   width: 100%;
   background: $white;
   position: absolute;
   left: 0;
   top: 0;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   box-shadow: 0 5px 5px $black-10;
   padding: 40px 0 60px;
-  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
   transform: translateY(-100%);
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: all 0.3s;
   opacity: 0;
 }
+
 .search-submit {
   position: absolute;
   height: 50px;
@@ -861,23 +936,23 @@ header {
   text-align: center;
   line-height: 50px;
   font-size: 20px;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: all 0.15s;
+
   &:hover {
     color: $c-rio-grande;
   }
 }
+
 @media (max-width: 1199px) {
   .header-top .entry {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
+
 li:hover .megamenu {
-  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
   transform: scale(1);
   opacity: 1;
   right: 0;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: transform 0.3s, opacity 0.3s, right 0s;
 }

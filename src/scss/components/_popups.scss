@@ -16,16 +16,17 @@ $c-suva-gray: #888;
   width: 100%;
   height: 100%;
   left: -100%;
-  //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
   transition-delay: 0.3s;
+
   &.active {
     left: 0;
-    //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
     transition-delay: 0s;
+
     .bg-layer {
       opacity: 1;
     }
   }
+
   .bg-layer {
     position: absolute;
     left: 0;
@@ -33,11 +34,11 @@ $c-suva-gray: #888;
     right: 0;
     bottom: -100px;
     background: $black-80;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.3s ease-out;
     opacity: 0;
   }
 }
+
 .popup-content {
   position: absolute;
   left: 0;
@@ -47,25 +48,25 @@ $c-suva-gray: #888;
   overflow: auto;
   font-size: 0;
   text-align: center;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: all 0.3s ease-out;
-  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
   transform: scale(1.2);
   opacity: 0;
   visibility: hidden;
   padding: 15px;
+
   &.active {
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: scale(1);
     opacity: 1;
     visibility: visible;
   }
+
   &::after {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     content: '';
   }
+
   .layer-close {
     position: absolute;
     left: 0;
@@ -74,6 +75,7 @@ $c-suva-gray: #888;
     height: 10000px;
   }
 }
+
 .popup-container {
   display: inline-block;
   vertical-align: middle;
@@ -81,25 +83,28 @@ $c-suva-gray: #888;
   position: relative;
   text-align: left;
   background: $white;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 5px;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   box-shadow: 3px 4px 20px $black-20;
+
   &.size-1 {
     max-width: 570px;
   }
+
   &.size-2 {
     max-width: 1170px;
   }
+
   &.size-3 {
     max-width: 970px;
   }
+
   &.size-4 {
     background: $black;
     max-width: 80%;
     padding: 50px 5px 5px;
     background: $white;
   }
+
   .button-close {
     position: absolute;
     right: 5px;
@@ -107,10 +112,12 @@ $c-suva-gray: #888;
     z-index: 2;
   }
 }
+
 .popup-align {
   padding: 80px 100px;
   overflow: hidden;
 }
+
 .simple-link {
   font-size: 11px;
   line-height: 18px;
@@ -119,15 +126,17 @@ $c-suva-gray: #888;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: all 0.15s;
+
   &:hover {
     color: $c-rio-grande;
   }
 }
+
 .popup-or {
   height: 140px;
   position: relative;
+
   &::before {
     position: absolute;
     left: 0;
@@ -137,11 +146,11 @@ $c-suva-gray: #888;
     content: '';
     height: 1px;
   }
+
   span {
     width: 60px;
     height: 60px;
     border: 5px $c-gallery solid;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 30px;
     text-align: center;
     line-height: 50px;
@@ -157,27 +166,31 @@ $c-suva-gray: #888;
     font-family: Raleway, sans-serif;
   }
 }
+
 @media (max-width: 991px) {
   .popup-container.size-2 .popup-align {
     padding: 40px 15px;
   }
 }
+
 @media (max-width: 767px) {
   .popup-container {
     &.size-4 {
       max-width: 100%;
     }
+
     &.size-1 .popup-align {
       padding: 40px 30px;
     }
   }
 }
+
 body.mobile .popup-content {
-  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
   transform: scale(1);
   opacity: 1;
   visibility: visible;
   display: none;
+
   &.active {
     display: block;
   }
