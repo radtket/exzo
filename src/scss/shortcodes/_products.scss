@@ -449,15 +449,15 @@ $black-80: rgba(0, 0, 0, 0.8);
   }
 
   &.style-5 {
-    text-align: center;
-    padding: 60px 30px 30px;
     background: $white;
     border-left: 1px $c-gallery solid;
     border-right: 1px $c-gallery solid;
+    padding: 60px 30px 30px;
+    text-align: center;
 
     .content {
-      max-width: 305px;
       margin: 0 auto;
+      max-width: 305px;
     }
 
     .swiper-container {
@@ -472,14 +472,14 @@ $black-80: rgba(0, 0, 0, 0.8);
     }
 
     .preview {
-      position: relative;
       margin-bottom: 50px;
+      position: relative;
 
       img {
-        max-width: 100%;
-        height: auto;
         display: block;
+        height: auto;
         margin: 0 auto;
+        max-width: 100%;
       }
     }
 
@@ -504,10 +504,7 @@ $black-80: rgba(0, 0, 0, 0.8);
         opacity: 0;
       }
 
-      .swiper-button-prev {
-        transform: translateX(0%);
-      }
-
+      .swiper-button-prev,
       .swiper-button-next {
         transform: translateX(0%);
       }
@@ -521,18 +518,24 @@ $black-80: rgba(0, 0, 0, 0.8);
         opacity: 1;
       }
 
-      .preview-buttons .button {
-        opacity: 1;
-        transform: translateX(0);
+      .preview-buttons {
+        .button {
+          opacity: 1;
+          transform: translateX(0) !important;
+        }
       }
     }
 
     .preview-buttons {
-      position: absolute;
-      left: 0;
-      right: 0;
       bottom: 0;
+      left: 0;
       padding-top: 15px;
+      position: absolute;
+      right: 0;
+
+      .buttons-wrapper {
+        margin: 0;
+      }
 
       .button {
         opacity: 0;

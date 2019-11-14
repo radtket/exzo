@@ -256,8 +256,10 @@ body {
     }
   }
 
-  .buttons-wrapper .button {
-    margin-right: 0;
+  .buttons-wrapper {
+    .button {
+      margin-right: 0;
+    }
   }
 
   .follow,
