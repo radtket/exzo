@@ -11,8 +11,8 @@ $c-fuscous-gray: #555;
 $wild-sand: #f4f4f4;
 
 header {
-  position: fixed;
   left: 0;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
@@ -28,8 +28,8 @@ header {
   }
 
   .nav-wrapper {
-    height: inherit;
     display: inline-block;
+    height: inherit;
     vertical-align: top;
   }
 
@@ -44,23 +44,23 @@ header {
       height: inherit;
 
       > li {
-        position: relative;
         display: inline-block;
-        vertical-align: top;
         height: inherit;
+        position: relative;
+        vertical-align: top;
 
         > a {
-          font-size: 11px;
-          line-height: 16px;
-          color: $c-tuatara;
-          font-weight: 700;
-          text-transform: uppercase;
-          padding: 9px 20px 7px;
-          display: block;
           border-radius: 16px;
-          position: relative;
-          top: 50%;
+          color: $c-tuatara;
+          display: block;
+          font-size: 11px;
+          font-weight: 700;
+          line-height: 16px;
           margin-top: -16px;
+          padding: 9px 20px 7px;
+          position: relative;
+          text-transform: uppercase;
+          top: 50%;
 
           &:hover {
             background-color: $c-rio-grande;
@@ -70,9 +70,9 @@ header {
         }
 
         > ul {
+          opacity: 0;
           transform: translateY(-100%);
           transition: all 0.3s;
-          opacity: 0;
         }
 
         &.active > a {
@@ -82,65 +82,69 @@ header {
         }
 
         &:hover > ul {
-          transform: translateY(0%);
           opacity: 1;
+          transform: translateY(0%);
         }
       }
     }
 
-    ul ul {
-      display: block !important;
-      position: absolute;
-      width: 165px;
-      left: 0;
-      top: 100%;
-      background: $white;
-      z-index: -1;
-      padding: 10px 0;
-      text-align: left;
-      box-shadow: 0 1px 3px $black-10;
-      border-radius: 0 0 5px 5px;
-
-      li {
-        padding: 0 20px 0 19px;
-        position: relative;
-        left: 1px;
-      }
-
-      a {
-        font-size: 10px;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: $c-suva-gray;
-        line-height: 16px;
-        display: block;
-        padding: 8px 0;
-
-        &:hover {
-          color: $c-rio-grande;
-        }
-      }
-
-      > li {
-        &.active > a {
-          color: $c-rio-grande;
-        }
-
-        &:hover ul {
-          transform: perspective(1000px) rotateY(0deg);
-          opacity: 1;
-        }
-      }
-
+    ul {
       ul {
-        left: 100%;
-        top: 0;
-        z-index: 0;
-        border-radius: 5px;
-        transform-origin: 0 50%;
-        transform: perspective(1000px) rotateY(90deg);
-        opacity: 0;
-        transition: all 0.3s;
+        background: $white;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 1px 3px $black-10;
+        display: block !important;
+        left: 0;
+        padding: 10px 0;
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        width: 165px;
+        z-index: -1;
+
+        li {
+          left: 1px;
+          padding: 0 20px 0 19px;
+          position: relative;
+        }
+
+        a {
+          color: $c-suva-gray;
+          display: block;
+          font-size: 10px;
+          font-weight: 700;
+          line-height: 16px;
+          padding: 8px 0;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $c-rio-grande;
+          }
+        }
+
+        > li {
+          &.active > a {
+            color: $c-rio-grande;
+          }
+
+          &:hover {
+            ul {
+              opacity: 1;
+              transform: perspective(1000px) rotateY(0deg);
+            }
+          }
+        }
+
+        ul {
+          border-radius: 5px;
+          left: 100%;
+          opacity: 0;
+          top: 0;
+          transform: perspective(1000px) rotateY(90deg);
+          transform-origin: 0 50%;
+          transition: all 0.3s;
+          z-index: 0;
+        }
       }
     }
   }
@@ -154,41 +158,38 @@ header {
   }
 
   .megamenu {
-    position: absolute;
-    width: 950px;
-    margin-right: 15px;
-    top: 100%;
-    height: 540px;
     background: $white;
-    box-shadow: 0 5px 5px $black-10;
-    margin-top: -1px;
-    z-index: -1;
     border-top: 5px $c-rio-grande solid;
-    padding: 30px;
+    box-shadow: 0 5px 5px $black-10;
     display: block !important;
+    height: 540px;
+    margin-right: 15px;
+    margin-top: -1px;
+    padding: 30px;
+    position: absolute;
+    top: 100%;
+    width: 950px;
+    z-index: -1;
 
     .links {
       float: left;
-      width: 220px;
       height: 480px;
       overflow: auto;
+      width: 220px;
 
       a {
-        font-size: 10px;
         color: $c-suva-gray;
+        display: block;
+        font-size: 10px;
         font-weight: 700;
         line-height: 16px;
-        display: block;
-        padding: 7px 15px 7px 0;
         margin-bottom: 15px;
-        text-transform: uppercase;
+        padding: 7px 15px 7px 0;
         text-align: left;
+        text-transform: uppercase;
         transition: all 0.15s;
 
-        &:hover {
-          color: $c-rio-grande;
-        }
-
+        &:hover,
         &.active {
           color: $c-rio-grande;
         }
@@ -205,23 +206,23 @@ header {
   }
 
   .megamenu-banner {
+    background-position: center center;
+    background-size: cover;
     border-radius: 10px;
     height: inherit;
-    position: relative;
-    background-size: cover;
-    background-position: center center;
     padding: 30px;
+    position: relative;
     text-align: center;
 
     &::before {
-      position: absolute;
+      background: $black-40;
+      border-radius: inherit;
+      content: '';
+      height: 100%;
       left: 0;
+      position: absolute;
       top: 0;
       width: 100%;
-      height: 100%;
-      background: $black-40;
-      content: '';
-      border-radius: inherit;
     }
   }
 }
@@ -231,10 +232,10 @@ header {
 }
 
 .header-top {
-  font-size: 0;
   background: $white;
-  height: 60px;
   border-bottom: 1px $c-gallery solid;
+  font-size: 0;
+  height: 60px;
 
   a {
     transition: all 0.15s;
@@ -250,10 +251,7 @@ header {
     &:hover {
       color: $c-rio-grande;
 
-      .fa {
-        color: $c-rio-grande;
-      }
-
+      .fa,
       b {
         color: $c-rio-grande;
       }
@@ -261,78 +259,79 @@ header {
   }
 
   b {
+    color: $c-fuscous-gray;
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    color: $c-fuscous-gray;
   }
 
   .entry {
-    display: inline-block;
-    vertical-align: bottom;
     border-left: 1px $c-gallery solid;
     border-right: 1px $c-gallery solid;
-    margin-left: -1px;
-    padding: 20px 25px;
+    color: $c-suva-gray;
+    display: inline-block;
     font-size: 10px;
     line-height: 20px;
-    color: $c-suva-gray;
-    text-transform: uppercase;
+    margin-left: -1px;
+    padding: 20px 25px;
     position: relative;
+    text-transform: uppercase;
+    vertical-align: bottom;
   }
 
   .fa {
-    font-size: 20px;
-    display: inline-block;
-    vertical-align: bottom;
     color: $c-fuscous-gray;
+    display: inline-block;
+    font-size: 20px;
     position: relative;
     top: -1px;
+    vertical-align: bottom;
   }
 
   .cart-title {
-    font-size: 13px;
     color: $c-rio-grande;
+    font-size: 13px;
   }
 
   .cart-icon {
-    position: relative;
     display: inline-block;
     padding: 0 12px 0 3px;
+    position: relative;
   }
 
   .language {
     cursor: pointer;
 
     .title {
-      padding-right: 15px;
-      width: 35px;
       background: $icon-7 right center no-repeat;
+      padding-right: 15px;
       text-align: left;
+      width: 35px;
     }
 
-    &:hover .language-toggle {
-      transform: scale(1);
-      opacity: 1;
-      left: 0;
-      transition: transform 0.3s, opacity 0.3s, left 0s;
+    &:hover {
+      .language-toggle {
+        left: 0;
+        opacity: 1;
+        transform: scale(1);
+        transition: transform 0.3s, opacity 0.3s, left 0s;
+      }
     }
   }
 
   .language-toggle {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
     background: $white;
-    padding: 10px 0;
-    z-index: 1;
     border-radius: 0 0 5px 5px;
     box-shadow: 0 1px 3px $black-10;
-    transform: scale(0.8);
-    opacity: 0;
     left: 10000px;
+    opacity: 0;
+    padding: 10px 0;
+    position: absolute;
+    top: 100%;
+    transform: scale(0.8);
     transform-origin: 50% 0;
     transition: transform 0.3s, opacity 0.3s, left 0s 0.3s;
+    width: 100%;
+    z-index: 1;
 
     a {
       display: block;
@@ -347,45 +346,46 @@ header {
   }
 
   .cart-toggle {
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: 2;
-    padding: 30px 30px 40px 30px;
-    width: 670px;
     background: $white;
     border-radius: 0 0 5px 5px;
+    border-top: 5px $c-rio-grande solid;
     box-shadow: 0 5px 5px $black-10;
-    text-align: left;
     cursor: auto;
     margin-top: -1px;
-    transform: scale(0.8);
     opacity: 0;
+    padding: 30px 30px 40px;
+    position: absolute;
     right: -10000px;
+    text-align: left;
+    top: 100%;
+    transform: scale(0.8);
     transform-origin: 100% 0;
     transition: transform 0.3s, opacity 0.3s, right 0s 0.3s;
-    border-top: 5px $c-rio-grande solid;
+    width: 670px;
+    z-index: 2;
   }
 
   .cart {
     cursor: pointer;
 
-    &:hover .cart-toggle {
-      transform: scale(1);
-      opacity: 1;
-      right: 0;
-      transition: transform 0.3s, opacity 0.3s, right 0s;
+    &:hover {
+      .cart-toggle {
+        opacity: 1;
+        right: 0;
+        transform: scale(1);
+        transition: transform 0.3s, opacity 0.3s, right 0s;
+      }
     }
   }
 }
 
 #logo {
   display: inline-block;
-  vertical-align: top;
   height: 60px;
+  margin-top: -30px;
   position: relative;
   top: 50%;
-  margin-top: -30px;
+  vertical-align: top;
 
   img {
     display: block;
@@ -395,38 +395,38 @@ header {
 }
 
 .cart-label {
-  position: absolute;
-  right: 2px;
-  top: -10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
   background: $c-rio-grande;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px $black-10;
   color: $white;
   font-size: 11px;
+  height: 20px;
   line-height: 20px;
+  position: absolute;
+  right: 2px;
   text-align: center;
-  box-shadow: 1px 1px 2px $black-10;
+  top: -10px;
+  width: 20px;
 }
 
 .cart-entry {
   background: $wild-sand;
   border-radius: 5px;
-  padding: 30px;
   margin-bottom: 1px;
+  padding: 30px;
 
   table {
     width: 100%;
 
     td {
-      vertical-align: middle;
-      padding: 0 30px;
       border-left: 1px $white solid;
+      padding: 0 30px;
+      vertical-align: middle;
 
       &:first-child {
-        text-align: left;
+        border: 0;
         padding-left: 0;
-        border: none;
+        text-align: left;
       }
 
       &:last-child {
@@ -449,9 +449,9 @@ header {
 }
 
 .cart-color {
-  width: 12px;
-  height: 12px;
   display: inline-block;
+  height: 12px;
+  width: 12px;
 }
 
 .cart-entry-thumbnail {
@@ -473,12 +473,12 @@ header {
 }
 
 .megamenu {
-  transform: scale(0.8);
+  border-top: 5px $c-rio-grande solid;
   opacity: 0;
   right: -10000px;
+  transform: scale(0.8);
   transform-origin: 100% 0;
   transition: transform 0.3s, opacity 0.3s, right 0s 0.3s;
-  border-top: 5px $c-rio-grande solid;
 }
 
 .cart-overflow {
@@ -492,8 +492,8 @@ header {
   }
 
   .cart-entry-thumbnail {
-    float: none;
     display: inline-block;
+    float: none;
     vertical-align: top;
   }
 
@@ -512,10 +512,10 @@ header {
       }
 
       td {
+        border: 0;
         display: block;
+        padding: 0 0 10px;
         text-align: center !important;
-        padding: 0 0 10px 0;
-        border: none;
         width: auto !important;
 
         &:last-child {
@@ -552,30 +552,30 @@ header {
 }
 
 .hamburger-icon {
-  width: 40px;
+  cursor: pointer;
+  display: none;
   height: 40px;
+  margin-top: -20px;
   position: absolute;
   right: 15px;
   top: 50%;
-  margin-top: -20px;
-  cursor: pointer;
-  display: none;
+  width: 40px;
 
   span {
-    position: absolute;
-    width: 100%;
-    right: 0;
-    height: 4px;
     background: $c-tuatara;
     border-radius: 2px;
+    height: 4px;
+    position: absolute;
+    right: 0;
+    width: 100%;
 
     &:nth-child(1) {
       top: 7px;
     }
 
     &:nth-child(2) {
-      top: 50%;
       margin-top: -2px;
+      top: 50%;
       width: 70%;
     }
 
@@ -585,36 +585,38 @@ header {
     }
   }
 
-  &.active span {
-    height: 2px;
+  &.active {
+    span {
+      height: 2px;
 
-    &:nth-child(1) {
-      display: none;
-    }
+      &:nth-child(1) {
+        display: none;
+      }
 
-    &:nth-child(2) {
-      transform: rotate(-45deg);
-      width: 70%;
-      left: 15%;
-      margin-top: -1px;
-    }
+      &:nth-child(2) {
+        left: 15%;
+        margin-top: -1px;
+        transform: rotate(-45deg);
+        width: 70%;
+      }
 
-    &:nth-child(3) {
-      bottom: auto;
-      top: 50%;
-      margin-top: -1px;
-      transform: rotate(45deg);
-      width: 70%;
-      left: 15%;
+      &:nth-child(3) {
+        bottom: auto;
+        left: 15%;
+        margin-top: -1px;
+        top: 50%;
+        transform: rotate(45deg);
+        width: 70%;
+      }
     }
   }
 }
 
 .header-bottom {
-  height: 98px;
   background: $white;
   box-shadow: 0 1px 3px $black-10;
   font-size: 0;
+  height: 98px;
 
   *[class*='col'] {
     height: inherit;
@@ -643,14 +645,14 @@ header {
   }
 
   .nav-wrapper {
-    position: fixed;
-    left: 100%;
-    top: -100px;
     bottom: -100px;
-    width: 100%;
+    left: 100%;
+    position: fixed;
     text-align: left;
-    z-index: 10;
+    top: -100px;
     transition: all 0s 0.3s;
+    width: 100%;
+    z-index: 10;
 
     &.active {
       left: 0;
@@ -667,14 +669,14 @@ header {
   }
 
   nav {
-    position: absolute;
-    width: 300px;
-    top: 0;
-    bottom: 0;
     background: $white;
+    bottom: 0;
+    position: absolute;
     right: 0;
+    top: 0;
     transform: translateX(100%);
     transition: all 0.3s;
+    width: 300px;
 
     li {
       position: relative;
@@ -686,27 +688,27 @@ header {
     }
 
     > ul {
-      position: absolute;
-      top: 150px;
       bottom: 100px;
       left: 0;
-      width: 100%;
       overflow: auto;
       padding: 15px;
+      position: absolute;
+      top: 150px;
+      width: 100%;
 
       > li {
         margin-bottom: 10px;
 
         > a {
-          font-size: 12px;
-          line-height: 16px;
-          color: $c-tuatara;
-          font-weight: 700;
-          text-transform: uppercase;
-          padding: 12px 45px 10px 20px;
-          display: block;
           border-radius: 19px;
           box-shadow: 1px 1px 2px $black-10;
+          color: $c-tuatara;
+          display: block;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 16px;
+          padding: 12px 45px 10px 20px;
+          text-transform: uppercase;
         }
 
         &.active {
@@ -732,132 +734,143 @@ header {
       }
     }
 
-    ul ul {
-      display: none;
-      padding-left: 30px;
+    ul {
+      ul {
+        display: none;
+        padding-left: 30px;
 
-      a {
-        font-size: 11px;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: $c-suva-gray;
-        line-height: 16px;
-        display: block;
-        padding: 12px 0 10px;
-      }
-
-      ul a {
-        font-size: 11px;
-        padding: 8px 0;
-        position: relative;
-
-        &::before {
-          width: 10px;
-          content: '';
-          height: 1px;
-          background: currentColor;
-          top: 8px;
-          display: inline-block;
-          vertical-align: top;
-          margin-right: 10px;
-          position: relative;
+        a {
+          color: $c-suva-gray;
+          display: block;
+          font-size: 11px;
+          font-weight: 700;
+          line-height: 16px;
+          padding: 12px 0 10px;
+          text-transform: uppercase;
         }
-      }
 
-      > li.active > a {
-        color: $c-rio-grande;
+        ul {
+          a {
+            font-size: 11px;
+            padding: 8px 0;
+            position: relative;
+
+            &::before {
+              background: currentColor;
+              content: '';
+              display: inline-block;
+              height: 1px;
+              margin-right: 10px;
+              position: relative;
+              top: 8px;
+              vertical-align: top;
+              width: 10px;
+            }
+          }
+        }
+
+        > li {
+          &.active {
+            > a {
+              color: $c-rio-grande;
+            }
+          }
+        }
       }
     }
   }
 
   .nav-close-layer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
     background: $black-70;
-    transition: all 0.3s;
+    height: 100%;
+    left: 0;
     opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s;
+    width: 100%;
   }
 
   .menu-toggle {
-    position: absolute;
-    width: 39px;
+    color: $c-suva-gray;
+    cursor: pointer;
     height: 39px;
+    position: absolute;
     right: 5px;
     top: 0;
-    cursor: pointer;
-    color: $c-suva-gray;
+    width: 39px;
 
     &::before {
-      width: 19px;
+      background: currentColor;
+      content: '';
       height: 1px;
       left: 10px;
-      top: 19px;
-      content: '';
       position: absolute;
-      background: currentColor;
+      top: 19px;
+      width: 19px;
     }
 
     &::after {
-      width: 1px;
+      background: currentColor;
+      content: '';
       height: 19px;
       left: 19px;
-      top: 10px;
-      content: '';
       position: absolute;
-      background: currentColor;
+      top: 10px;
       transition: all 0.3s;
+      width: 1px;
     }
 
-    &.active:after {
-      height: 0;
-      top: 19px;
+    &.active {
+      &::after {
+        height: 0;
+        top: 19px;
+      }
     }
   }
 
   .navigation-title {
-    display: block;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 100px;
-    font-size: 18px;
-    line-height: 30px;
-    padding: 10px 20px;
     background: $white;
     border-bottom: 1px $c-gallery solid;
-    font-family: Raleway, sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
     color: $c-tuatara;
-    padding-right: 40px;
+    display: block;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    left: 0;
+    line-height: 30px;
+    padding: 10px 40px 10px 20px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 100px;
+    width: 100%;
   }
 
   .megamenu {
+    border: 0;
     display: none;
-    border: none;
-    transition: none;
-    transform: none;
     opacity: 1;
     right: auto;
+    transform: none;
+    transition: none;
 
     .content {
       display: none;
     }
 
-    .links a {
-      font-size: 11px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: $c-suva-gray;
-      line-height: 16px;
-      display: block;
-      padding: 12px 0 10px 30px;
+    .links {
+      a {
+        color: $c-suva-gray;
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 16px;
+        padding: 12px 0 10px 30px;
+        text-transform: uppercase;
 
-      &.active {
-        color: $c-rio-grande;
+        &.active {
+          color: $c-rio-grande;
+        }
       }
     }
   }
@@ -878,18 +891,18 @@ header {
 }
 
 .header-bottom-icon {
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  line-height: 40px;
-  text-align: center;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  top: 50%;
-  margin-top: -20px;
-  transition: all 0.15s;
   cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: -20px;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transition: all 0.15s;
+  vertical-align: top;
+  width: 40px;
 
   &:hover {
     color: $c-rio-grande;
@@ -902,39 +915,41 @@ header {
 
   .button-close {
     position: absolute;
-    top: 5px;
     right: 5px;
+    top: 5px;
   }
 
-  &.active .header-search-content {
-    transform: translateY(0%);
-    opacity: 1;
+  &.active {
+    .header-search-content {
+      opacity: 1;
+      transform: translateY(0%);
+    }
   }
 }
 
 .header-search-content {
-  width: 100%;
   background: $white;
-  position: absolute;
-  left: 0;
-  top: 0;
   box-shadow: 0 5px 5px $black-10;
+  left: 0;
+  opacity: 0;
   padding: 40px 0 60px;
+  position: absolute;
+  top: 0;
   transform: translateY(-100%);
   transition: all 0.3s;
-  opacity: 0;
+  width: 100%;
 }
 
 .search-submit {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  right: 0;
-  top: 0;
-  text-align: center;
-  line-height: 50px;
   font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
   transition: all 0.15s;
+  width: 50px;
 
   &:hover {
     color: $c-rio-grande;
@@ -942,15 +957,21 @@ header {
 }
 
 @media (max-width: 1199px) {
-  .header-top .entry {
-    padding-left: 10px;
-    padding-right: 10px;
+  .header-top {
+    .entry {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }
 
-li:hover .megamenu {
-  transform: scale(1);
-  opacity: 1;
-  right: 0;
-  transition: transform 0.3s, opacity 0.3s, right 0s;
+li {
+  &:hover {
+    .megamenu {
+      opacity: 1;
+      right: 0;
+      transform: scale(1);
+      transition: transform 0.3s, opacity 0.3s, right 0s;
+    }
+  }
 }
