@@ -14,11 +14,12 @@
     cursor: auto;
     justify-content: center;
     transform: none !important;
-  }
 
-  .swiper-wrapper .swiper-slide:last-child,
-  .swiper-container > .swiper-wrapper .swiper-slide:last-child {
-    margin-right: 0 !important;
+    .swiper-slide {
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
   }
 
   .swiper-wrapper + .swiper-pagination-bullets,

@@ -1,5 +1,7 @@
+$c-gallery: #eee;
+
 .order-details-entry {
-  border-bottom: 1px #eee solid;
+  border-bottom: 1px $c-gallery solid;
   padding-bottom: 0.5em;
   padding-top: 2em;
 }

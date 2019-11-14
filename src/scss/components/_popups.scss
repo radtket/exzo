@@ -87,6 +87,7 @@ $c-suva-gray: #888;
 
   &.size-1 {
     max-width: 570px;
+
     .popup-align {
       @media (max-width: 767px) {
         padding: 40px 30px;
@@ -96,6 +97,7 @@ $c-suva-gray: #888;
 
   &.size-2 {
     max-width: 1170px;
+
     .popup-align {
       @media (max-width: 991px) {
         padding: 40px 15px;
@@ -161,8 +163,8 @@ $c-suva-gray: #888;
 
   span {
     background: $white;
-    border-radius: 30px;
     border: 5px $c-gallery solid;
+    border-radius: 30px;
     color: $c-suva-gray;
     font-family: Raleway, sans-serif;
     font-size: 11px;

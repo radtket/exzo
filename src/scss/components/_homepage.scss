@@ -109,12 +109,12 @@ $white-20: rgba(255, 255, 255, 0.2);
         background: transparent;
         border-color: $white-50;
 
-        &:hover {
+        &:hover,
+        &.active {
           border-color: $white;
         }
 
         &.active {
-          border-color: $white;
           background: $white;
         }
       }
@@ -126,12 +126,12 @@ $white-20: rgba(255, 255, 255, 0.2);
       .entry {
         border-color: $white-20;
 
-        &:hover {
+        &:hover,
+        &.active {
           border-color: $c-rio-grande;
         }
 
         &.active {
-          border-color: $c-rio-grande;
           background: $c-rio-grande;
         }
       }

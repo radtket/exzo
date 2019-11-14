@@ -168,20 +168,24 @@ $white: #fff;
     }
   }
 
-  &.text-center .valign-middle-content {
-    margin: 0 auto;
+  &.text-center {
+    .valign-middle-content {
+      margin: 0 auto;
+    }
   }
 }
 
 @media (min-width: 768px) {
-  .banner-shortcode.style-1 {
-    .description {
-      background: none !important;
-      height: 100%;
-      position: absolute;
-      right: 15px;
-      text-align: center;
-      width: 35%;
+  .banner-shortcode {
+    &.style-1 {
+      .description {
+        background: none !important;
+        height: 100%;
+        position: absolute;
+        right: 15px;
+        text-align: center;
+        width: 35%;
+      }
     }
   }
 }
@@ -223,7 +227,7 @@ $white: #fff;
       .image {
         display: block;
         float: none;
-        margin: 0 auto 30px auto;
+        margin: 0 auto 30px;
       }
 
       .content {
@@ -238,30 +242,38 @@ $white: #fff;
 }
 
 @media (min-width: 1200px) {
-  .banner-shortcode.style-3.wide {
-    .valign-middle {
-      padding-left: 100px;
-      padding-right: 100px;
+  .banner-shortcode {
+    &.style-3 {
+      &.wide {
+        .valign-middle {
+          padding-left: 100px;
+          padding-right: 100px;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 991px) {
-  .banner-shortcode.style-4 {
-    .valign-middle-cell {
-      height: 0;
+  .banner-shortcode {
+    &.style-4 {
+      .valign-middle-cell {
+        height: 0;
+      }
     }
   }
 }
 
 @media (max-width: 1199px) {
-  .banner-shortcode.style-6 {
-    .image {
-      max-width: 190px;
-    }
+  .banner-shortcode {
+    &.style-6 {
+      .image {
+        max-width: 190px;
+      }
 
-    .content {
-      margin-left: 210px;
+      .content {
+        margin-left: 210px;
+      }
     }
   }
 }

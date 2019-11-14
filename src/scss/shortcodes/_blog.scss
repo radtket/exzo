@@ -7,34 +7,35 @@ $white-50: rgba(255, 255, 255, 0.5);
 
 .blog-shortcode {
   &.style-1 {
-    max-width: 270px;
-    margin: 0 auto;
     display: inline-block;
     margin: 0 5px 10px;
+    max-width: 270px;
 
     .description {
       background: $white;
       padding: 25px 20px;
     }
 
-    .preview img {
-      display: block;
-      width: 100%;
-      height: auto;
+    .preview {
+      img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
     }
   }
 
   &.style-2 {
     .preview {
       display: block;
-      max-width: 270px;
       margin-bottom: 15px;
+      max-width: 270px;
       position: relative;
 
       img {
         display: block;
-        max-width: 100%;
         height: auto;
+        max-width: 100%;
       }
     }
 
@@ -45,20 +46,20 @@ $white-50: rgba(255, 255, 255, 0.5);
 
   &.style-3 {
     &::after {
-      content: '';
       clear: both;
+      content: '';
       display: block;
     }
 
     .preview {
       display: block;
-      position: relative;
       margin-bottom: 30px;
+      position: relative;
 
       img {
         display: block;
-        max-width: 100%;
         height: auto;
+        max-width: 100%;
       }
 
       .swiper-button-next {
@@ -71,25 +72,34 @@ $white-50: rgba(255, 255, 255, 0.5);
     }
 
     .date {
+      color: $c-suva-gray;
       float: left;
-      width: 70px;
-      text-align: center;
       font-size: 11px;
       line-height: 16px;
-      color: $c-suva-gray;
+      text-align: center;
       text-transform: uppercase;
+      width: 70px;
+
+      @media (max-width: 767px) {
+        float: none;
+        margin-bottom: 5px;
+        text-align: left;
+      }
 
       span {
+        color: $c-fuscous-gray;
         display: block;
         font-size: 30px;
         line-height: 24px;
-        color: $c-fuscous-gray;
         margin-bottom: 5px;
       }
     }
 
     .content {
       margin-left: 100px;
+      @media (max-width: 767px) {
+        margin-left: 0;
+      }
     }
 
     .title {
@@ -107,9 +117,9 @@ $white-50: rgba(255, 255, 255, 0.5);
 }
 
 .blog-comments {
+  color: $c-fuscous-gray;
   font-size: 11px;
   line-height: 24px;
-  color: $c-fuscous-gray;
   margin-bottom: 5px;
 
   .fa {
@@ -122,57 +132,43 @@ $white-50: rgba(255, 255, 255, 0.5);
   text-align: center;
 
   .cell-view {
-    height: 300px;
     display: table-cell;
-    vertical-align: middle;
+    height: 300px;
     padding: 30px 15px;
+    vertical-align: middle;
   }
 
   blockquote {
-    max-width: 640px;
-    margin: 0 auto;
-    padding-top: 40px;
     background: $icon-30 center top no-repeat;
+    margin: 0 auto;
+    max-width: 640px;
+    padding-top: 40px;
   }
 
   .blockquote-title {
+    color: $white;
     font-family: Raleway, sans-serif;
     font-size: 18px;
-    line-height: 24px;
-    color: $white;
-    text-transform: uppercase;
     font-weight: 700;
+    line-height: 24px;
     margin-bottom: 15px;
+    text-transform: uppercase;
   }
 
   .blockquote-author {
+    color: $white;
     font-family: Raleway, sans-serif;
     font-size: 13px;
-    line-height: 19px;
-    color: $white;
-    text-transform: uppercase;
     font-weight: 900;
+    line-height: 19px;
     margin-bottom: 5px;
+    text-transform: uppercase;
   }
 
   .blockquote-position {
-    text-transform: uppercase;
+    color: $white-50;
     font-size: 11px;
     line-height: 16px;
-    color: $white-50;
-  }
-}
-
-@media (max-width: 767px) {
-  .blog-shortcode.style-3 {
-    .date {
-      float: none;
-      margin-bottom: 5px;
-      text-align: left;
-    }
-
-    .content {
-      margin-left: 0;
-    }
+    text-transform: uppercase;
   }
 }
