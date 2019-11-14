@@ -27,6 +27,7 @@ import Swiper from "swiper";
 /*= =============== */
 /* 01 - VARIABLES */
 /*= =============== */
+
 const swipers = [];
 let winW;
 let winH;
@@ -40,6 +41,7 @@ const isMobile =
 	navigator.userAgent.match(/iPod/i);
 let ID;
 let percentage;
+let tabsFinish = 0;
 
 /*= ======================= */
 /* 02 - page calculations */
@@ -379,9 +381,7 @@ $(document).on("click", ".color-selection .entry", function() {
 });
 
 // tabs
-let tabsFinish = 0;
 $(document).on("click", ".tabs-block .tab-menu", function() {
-	console.log({ tabsFinish });
 	if ($(this).hasClass("active") || tabsFinish) {
 		return false;
 	}
@@ -510,4 +510,20 @@ $(".input-file-wrapper .file-remove").on("click", function() {
 // checkout - toggle wrapper checkbox
 $(".checkbox-toggle-title input").on("change", () => {
 	$(".checkbox-toggle-wrapper").slideToggle();
+});
+
+$(document).ready(function() {
+	const minVal = parseInt($(".min-price").text(), 10);
+	const maxVal = parseInt($(".max-price").text(), 10);
+	$("#prices-range").slider({
+		range: true,
+		min: minVal,
+		max: maxVal,
+		step: 5,
+		values: [minVal, maxVal],
+		slide(event, ui) {
+			$(".min-price").text(ui.values[0]);
+			$(".max-price").text(ui.values[1]);
+		},
+	});
 });
