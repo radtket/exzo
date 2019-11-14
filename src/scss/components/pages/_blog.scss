@@ -1,16 +1,24 @@
 .comments-wrapper {
   margin-left: -100px;
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+  }
 }
 
 .comment-entry {
-  position: relative;
   padding-left: 100px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+  }
 
   .image {
-    float: left;
-    width: 50px;
-    height: auto;
     border-radius: 25px;
+    float: left;
+    height: auto;
+    width: 50px;
   }
 
   .content {
@@ -22,15 +30,5 @@
     position: absolute;
     right: 0;
     top: 5px;
-  }
-}
-
-@media (max-width: 767px) {
-  .comments-wrapper {
-    margin-left: 0;
-  }
-
-  .comment-entry {
-    padding-left: 0;
   }
 }

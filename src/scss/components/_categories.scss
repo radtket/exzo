@@ -9,11 +9,6 @@ $c-cape-cod: #3f3f3f;
 $c-rio-grande: #b8cd06;
 $gallery: #efefef;
 
-//urls
-$url-0: url('http://unionagency.one/exzo/img/icon-12.png');
-$url-1: url('http://unionagency.one/exzo/img/icon-13.png');
-$url-2: url('http://unionagency.one/exzo/img/icon-18.png');
-
 %cates-extend-1 {
   background: $c-rio-grande;
   border-color: $white-50;
@@ -26,6 +21,19 @@ $url-2: url('http://unionagency.one/exzo/img/icon-18.png');
 
   ul {
     clear: both;
+    display: none;
+
+    @media (min-width: 992px) {
+      display: block !important;
+      left: -1000%;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transform: perspective(1000px) rotateY(45deg);
+      transform-origin: 0 50%;
+      transition: transform 0.3s, opacity 0.3s, left 0s 0.3s;
+      width: 100%;
+    }
   }
 
   li {
@@ -57,12 +65,20 @@ $url-2: url('http://unionagency.one/exzo/img/icon-18.png');
         @extend %cates-extend-1;
 
         + .toggle {
-          background-image: $url-1;
+          background-image: $icon-13;
         }
       }
     }
 
     ul {
+      li {
+        a {
+          @media (max-width: 991px) {
+            background: $c-fuscous-gray;
+            padding-left: 40px;
+          }
+        }
+      }
       a {
         background: $c-tuatara;
         border-color: $c-cape-cod;
@@ -72,7 +88,7 @@ $url-2: url('http://unionagency.one/exzo/img/icon-18.png');
           @extend %cates-extend-1;
 
           + .toggle {
-            background-image: $url-1;
+            background-image: $icon-13;
           }
         }
       }
@@ -80,25 +96,25 @@ $url-2: url('http://unionagency.one/exzo/img/icon-18.png');
   }
 
   .toggle {
-    width: 46px;
-    height: 46px;
-    float: left;
-    margin-left: -46px;
+    background: $icon-12 center center no-repeat;
     cursor: pointer;
-    background: $url-0 center center no-repeat;
+    float: left;
+    height: 46px;
+    margin-left: -46px;
     position: relative;
+    width: 46px;
   }
 
   &.transparent > li > a {
     background: transparent;
-    padding-left: 0;
     border-color: $gallery;
+    padding-left: 0;
 
     &:hover {
       color: $c-rio-grande;
 
       + .toggle {
-        background-image: $url-2;
+        background-image: $icon-18;
       }
     }
 
@@ -110,38 +126,26 @@ $url-2: url('http://unionagency.one/exzo/img/icon-18.png');
 
 @media (min-width: 992px) {
   .categories-menu {
-    ul {
-      position: absolute;
-      left: -1000%;
-      top: 0;
-      width: 100%;
-      transform-origin: 0 50%;
-      transform: perspective(1000px) rotateY(45deg);
-      opacity: 0;
-      transition: transform 0.3s, opacity 0.3s, left 0s 0.3s;
-      display: block !important;
-    }
-
     &.alignleft {
       ul {
-        right: 1000%;
-        left: auto;
-        top: 0;
-        width: 100%;
-        transform-origin: 100% 50%;
-        transform: perspective(1000px) rotateY(45deg);
-        opacity: 0;
-        transition: transform 0.3s, opacity 0.3s, right 0s 0.3s;
         display: block !important;
+        left: auto;
+        opacity: 0;
+        right: 1000%;
+        top: 0;
+        transform: perspective(1000px) rotateY(45deg);
+        transform-origin: 100% 50%;
+        transition: transform 0.3s, opacity 0.3s, right 0s 0.3s;
+        width: 100%;
       }
 
       li {
         &:hover {
           > ul {
-            transform: perspective(1000px) rotateY(0deg);
+            left: auto;
             opacity: 1;
             right: 100%;
-            left: auto;
+            transform: perspective(1000px) rotateY(0deg);
             transition: transform 0.3s, opacity 0.3s, right 0s;
           }
         }
@@ -151,9 +155,9 @@ $url-2: url('http://unionagency.one/exzo/img/icon-18.png');
     li {
       &:hover {
         > ul {
-          transform: perspective(1000px) rotateY(0deg);
-          opacity: 1;
           left: 100%;
+          opacity: 1;
+          transform: perspective(1000px) rotateY(0deg);
           transition: transform 0.3s, opacity 0.3s, left 0s;
         }
       }
@@ -163,15 +167,6 @@ $url-2: url('http://unionagency.one/exzo/img/icon-18.png');
 
 @media (max-width: 991px) {
   .categories-menu {
-    ul {
-      display: none;
-
-      ul li a {
-        padding-left: 40px;
-        background: $c-fuscous-gray;
-      }
-    }
-
     .toggle {
       transform: rotate(90deg);
 

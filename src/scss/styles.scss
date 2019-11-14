@@ -1,6 +1,6 @@
 @import './variables';
 @import './reset';
-
+@import '../../node_modules/bourbon/core/bourbon';
 // Bootstrap
 @import './vendor/bootstrap';
 @import './vendor/bootstrap-extension';

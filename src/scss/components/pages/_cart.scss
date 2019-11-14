@@ -8,16 +8,16 @@ $c-gallery: #eee;
 
   th {
     background: $c-tuatara;
-    font-weight: 700;
+    color: $white;
     font-family: Raleway, sans-serif;
     font-size: 13px;
-    line-height: 18px;
-    color: $white;
+    font-weight: 700;
     height: 70px;
-    vertical-align: middle;
+    line-height: 18px;
     padding: 0;
     text-align: center;
     text-transform: uppercase;
+    vertical-align: middle;
 
     &:first-child {
       border-radius: 5px 0 0 5px;
@@ -39,13 +39,13 @@ $c-gallery: #eee;
     }
 
     td {
-      vertical-align: middle;
       padding: 25px 10px;
       text-align: center;
+      vertical-align: middle;
 
       &:nth-child(2) {
-        text-align: left;
         padding-left: 0;
+        text-align: left;
       }
     }
   }
@@ -82,30 +82,29 @@ $c-gallery: #eee;
 
     td {
       display: block;
+      padding: 10px 0 10px 100px !important;
       position: relative;
       text-align: left !important;
-      padding: 10px 0 10px 100px !important;
       width: auto !important;
-      position: relative;
 
       &::before {
-        content: attr(data-title);
         color: $c-tuatara;
-        font-weight: 900;
+        content: attr(data-title);
         font-family: Raleway, sans-serif;
-        text-transform: uppercase;
         font-size: 13px;
+        font-weight: 900;
+        left: 0;
         line-height: 19px;
-        width: 100px;
         padding-right: 10px;
         position: absolute;
-        left: 0;
+        text-transform: uppercase;
         top: 7px;
+        width: 100px;
       }
 
       &:last-child {
-        position: static;
         padding: 0;
+        position: static;
       }
     }
 

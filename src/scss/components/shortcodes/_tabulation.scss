@@ -5,56 +5,71 @@ $black-10: rgba(0, 0, 0, 0.1);
 $white: #fff;
 $c-rio-grande: #b8cd06;
 
-//urls
-$url-0: url(../img/icon-7.png);
-
 .tabulation-menu-wrapper {
   margin: 0 -20px;
 
+  @media (max-width: 767px) {
+    margin: 0;
+  }
+
   &::after {
-    display: block;
     content: '';
+    display: block;
     margin-top: -5px;
+  }
+
+  .tabulation-toggle {
+    @media (max-width: 767px) {
+      padding-top: 10px;
+
+      li {
+        display: block;
+      }
+    }
   }
 }
 
 .tabulation-toggle {
   font-size: 0;
 
+  @media (max-width: 767px) {
+    display: none;
+  }
+
   li {
-    padding: 0 20px;
     border-left: 1px $c-gallery solid;
     display: inline-block;
     margin-bottom: 5px;
+    padding: 0 20px;
 
     &:first-child {
-      border: none;
+      border: 0;
     }
   }
 }
 
 .tab-menu {
+  border-radius: 16px;
+  color: $c-suva-gray;
+  display: block;
+  font-family: Raleway, sans-serif;
   font-size: 11px;
+  font-weight: 700;
   line-height: 16px;
   padding: 8px 20px;
-  color: $c-suva-gray;
-  text-transform: uppercase;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  display: block;
   position: relative;
-  border-radius: 16px;
-  transition: all 0.15s;
   text-align: center;
+  text-transform: uppercase;
+  transition: all 0.15s;
 
   &:hover {
-    box-shadow: 1px 1px 2px $black-10;
     background: $white;
+    box-shadow: 1px 1px 2px $black-10;
   }
 
   &.active {
-    box-shadow: 1px 1px 2px $black-10;
     background-color: $c-rio-grande;
+    box-shadow: 1px 1px 2px $black-10;
     color: $white;
   }
 }
@@ -69,52 +84,37 @@ $url-0: url(../img/icon-7.png);
 
 .tabulation-title {
   background: $white;
-  text-transform: uppercase;
+  cursor: pointer;
+  display: none;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   padding-right: 50px;
-  cursor: pointer;
-  display: none;
   position: relative;
   text-align: left;
+  text-transform: uppercase;
 
   &::after {
-    width: 50px;
+    background: $icon-7 center center no-repeat;
+    content: '';
     height: 50px;
-    background: $url-0 center center no-repeat;
     position: absolute;
     right: 0;
     top: 0;
-    content: '';
+    width: 50px;
   }
 
-  &.active:after {
-    transform: rotate(180deg);
+  @media (max-width: 767px) {
+    display: block;
   }
-}
 
-@media (max-width: 767px) {
-  .tabulation-menu-wrapper {
-    margin: 0;
-
-    .tabulation-toggle {
-      padding-top: 10px;
-
-      li {
+  &.active {
+    &::after {
+      transform: rotate(180deg);
+    }
+    @media (max-width: 767px) {
+      + .tabulation-toggle {
         display: block;
       }
     }
-  }
-
-  .tabulation-title {
-    display: block;
-
-    &.active + .tabulation-toggle {
-      display: block;
-    }
-  }
-
-  .tabulation-toggle {
-    display: none;
   }
 }

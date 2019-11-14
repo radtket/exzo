@@ -5,9 +5,6 @@ $c-fuscous-gray: #555;
 $c-tuatara: #343434;
 $white-50: rgba(255, 255, 255, 0.5);
 
-//urls
-$url-0: url(../img/icon-30.png);
-
 .blog-shortcode {
   &.style-1 {
     max-width: 270px;
@@ -135,7 +132,7 @@ $url-0: url(../img/icon-30.png);
     max-width: 640px;
     margin: 0 auto;
     padding-top: 40px;
-    background: $url-0 center top no-repeat;
+    background: $icon-30 center top no-repeat;
   }
 
   .blockquote-title {

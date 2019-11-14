@@ -10,20 +10,19 @@ $white-20: rgba(255, 255, 255, 0.2);
 }
 
 .slider-product-preview {
-  position: absolute;
-  width: 50%;
-  right: 15px;
-  top: 0;
-  top: 80px;
   bottom: 80px;
+  position: absolute;
+  right: 15px;
+  top: 80px;
+  width: 50%;
 
   > img {
-    position: absolute;
     left: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    max-width: 100%;
-    max-height: 100%;
   }
 
   &.align-left {
@@ -32,13 +31,13 @@ $white-20: rgba(255, 255, 255, 0.2);
 
     .product-preview-shortcode {
       .preview {
-        right: 0;
         left: 100px;
+        right: 0;
       }
 
       .sidebar {
-        right: auto;
         left: 0;
+        right: auto;
       }
     }
   }
@@ -49,16 +48,16 @@ $white-20: rgba(255, 255, 255, 0.2);
   position: relative;
 
   .preview {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 100px;
     bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 100px;
+    top: 0;
 
     .entry {
-      background-size: contain;
-      background-repeat: no-repeat;
       background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
       opacity: 0;
       transition: all 0.5s;
 
@@ -69,19 +68,19 @@ $white-20: rgba(255, 255, 255, 0.2);
   }
 
   .sidebar {
-    position: absolute;
-    top: 0;
-    right: 0;
     height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
 
     .entry {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
       border: 1px $c-gallery solid;
+      border-radius: 50%;
       cursor: pointer;
+      height: 70px;
       margin-bottom: 20px;
       transition: all 0.3s;
+      width: 70px;
 
       &:last-child {
         margin-bottom: 0;
@@ -89,73 +88,83 @@ $white-20: rgba(255, 255, 255, 0.2);
 
       img {
         display: block;
-        max-width: 100%;
         height: auto;
+        max-width: 100%;
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         border-color: $c-rio-grande;
       }
 
       &.active {
-        border-color: $c-rio-grande;
         background: $c-rio-grande;
       }
     }
   }
 
-  &.light .sidebar .entry {
-    background: transparent;
-    border-color: $white-50;
+  &.light {
+    .sidebar {
+      .entry {
+        background: transparent;
+        border-color: $white-50;
 
-    &:hover {
-      border-color: $white;
-    }
+        &:hover {
+          border-color: $white;
+        }
 
-    &.active {
-      border-color: $white;
-      background: $white;
+        &.active {
+          border-color: $white;
+          background: $white;
+        }
+      }
     }
   }
 
-  &.light-green .sidebar .entry {
-    border-color: $white-20;
+  &.light-green {
+    .sidebar {
+      .entry {
+        border-color: $white-20;
 
-    &:hover {
-      border-color: $c-rio-grande;
-    }
+        &:hover {
+          border-color: $c-rio-grande;
+        }
 
-    &.active {
-      border-color: $c-rio-grande;
-      background: $c-rio-grande;
+        &.active {
+          border-color: $c-rio-grande;
+          background: $c-rio-grande;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 767px) {
   .slider-product-preview {
-    position: relative;
-    left: auto;
-    right: auto;
-    top: auto;
     bottom: auto;
     height: 300px;
+    left: auto;
     margin: 0 auto;
+    position: relative;
+    right: auto;
+    top: auto;
     width: auto;
 
     &.align-left {
-      position: relative;
-      left: auto;
-      right: auto;
-      top: auto;
       bottom: auto;
       height: 300px;
+      left: auto;
       margin: 0 auto;
+      position: relative;
+      right: auto;
+      top: auto;
       width: auto;
 
-      .product-preview-shortcode .preview {
-        right: 0;
-        left: 80px;
+      .product-preview-shortcode {
+        .preview {
+          left: 80px;
+          right: 0;
+        }
       }
     }
   }
@@ -165,9 +174,11 @@ $white-20: rgba(255, 255, 255, 0.2);
       right: 80px;
     }
 
-    .sidebar .entry {
-      width: 50px;
-      height: 50px;
+    .sidebar {
+      .entry {
+        height: 50px;
+        width: 50px;
+      }
     }
   }
 }

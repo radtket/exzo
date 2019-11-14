@@ -6,9 +6,6 @@ $c-suva-gray: #888;
 $c-gallery: #eee;
 $black-10: rgba(0, 0, 0, 0.1);
 
-//urls
-$url-0: url(../img/icon-12.png);
-
 .ui-slider {
   position: relative;
   height: 6px;
@@ -57,7 +54,7 @@ $url-0: url(../img/icon-12.png);
     &::after {
       width: 5px;
       height: 9px;
-      background: $url-0;
+      background: $icon-12;
       display: inline-block;
       vertical-align: top;
       content: '';

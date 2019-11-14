@@ -14,7 +14,7 @@ h6 {
 }
 
 .col-xs-b0 {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .col-xs-b5 {
@@ -114,8 +114,16 @@ h6 {
 }
 
 .empty-space {
+  position: relative;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
   &.col-xs-b0 {
-    height: 0px;
+    height: 0;
     margin-bottom: 0;
   }
 
@@ -254,7 +262,7 @@ h6 {
 
 @media (min-width: 768px) {
   .col-sm-b0 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .col-sm-b5 {
@@ -355,7 +363,7 @@ h6 {
 
   .empty-space {
     &.col-sm-b0 {
-      height: 0px;
+      height: 0;
       margin-bottom: 0;
     }
 
@@ -495,7 +503,7 @@ h6 {
 
 @media (min-width: 992px) {
   .col-md-b0 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .col-md-b5 {
@@ -596,7 +604,7 @@ h6 {
 
   .empty-space {
     &.col-md-b0 {
-      height: 0px;
+      height: 0;
       margin-bottom: 0;
     }
 
@@ -736,7 +744,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .col-lg-b0 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .col-lg-b5 {
@@ -837,7 +845,7 @@ h6 {
 
   .empty-space {
     &.col-lg-b0 {
-      height: 0px;
+      height: 0;
       margin-bottom: 0;
     }
 
@@ -975,23 +983,15 @@ h6 {
   }
 }
 
-.empty-space {
-  position: relative;
-
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-
 .row {
   &.m0 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
 
-    > div[class*='col'] {
-      padding: 0 0;
+    > div {
+      &[class*='col'] {
+        padding: 0;
+      }
     }
   }
 
@@ -999,8 +999,10 @@ h6 {
     margin-left: -10px;
     margin-right: -10px;
 
-    > div[class*='col'] {
-      padding: 0 10px;
+    > div {
+      &[class*='col'] {
+        padding: 0 10px;
+      }
     }
   }
 
@@ -1008,8 +1010,10 @@ h6 {
     margin-left: -5px;
     margin-right: -5px;
 
-    > div[class*='col'] {
-      padding: 0 5px;
+    > div {
+      &[class*='col'] {
+        padding: 0 5px;
+      }
     }
   }
 }

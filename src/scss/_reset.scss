@@ -122,18 +122,9 @@ section {
 blockquote,
 q {
   quotes: none;
-}
 
-blockquote {
-  &:before,
-  &:after {
-    content: none;
-  }
-}
-
-q {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: none;
   }
 }
@@ -151,11 +142,13 @@ body * {
   overflow: hidden;
 }
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none;
+input,
+select,
+textarea,
+button {
+  &:focus {
+    outline: none;
+  }
 }
 
 input,
@@ -164,7 +157,7 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background: none;
-  border: none;
+  border: 0;
   border-radius: 0;
   font-family: Questrial, sans-serif;
   font-weight: 400;
@@ -178,14 +171,16 @@ textarea {
   resize: none;
 }
 
-select::-ms-expand {
-  display: none;
+select {
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 input {
   &[type='submit'],
   &[type='file'] {
-    border: none;
+    border: 0;
     cursor: pointer;
     height: 100%;
     left: 0;
@@ -198,6 +193,7 @@ input {
 }
 
 a {
+  color: inherit;
   cursor: pointer;
   outline: none;
   text-decoration: none;
@@ -227,8 +223,4 @@ strong {
 ul,
 ol {
   list-style: none;
-}
-
-a {
-  color: inherit;
 }

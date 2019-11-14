@@ -6,29 +6,6 @@ $c-fuscous-gray: #555;
 $c-suva-gray: #888;
 $c-thunderbird: #cd2706;
 
-%product-extend-1 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 50px;
-  height: 100%;
-  border-right: 1px $c-gallery solid;
-  cursor: pointer;
-  border-radius: 21px 0 0 21px;
-  transition: all 0.15s;
-}
-
-%product-extend_2 {
-  width: 14px;
-  height: 1px;
-  background: $c-fuscous-gray;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -7px;
-  content: '';
-}
-
 .rate-wrapper {
   color: $c-rio-grande;
   font-size: 14px;
@@ -36,27 +13,51 @@ $c-thunderbird: #cd2706;
   margin: 0 5px;
 
   &.set {
-    &:hover .fa {
-      opacity: 0.5;
+    &:hover {
+      .fa {
+        opacity: 0.5;
+      }
     }
 
-    .fa:hover {
-      opacity: 1;
-      cursor: pointer;
+    .fa {
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
     }
   }
 }
 
 .quantity-select {
+  border: 1px $c-gallery solid;
+  border-radius: 21px;
   height: 42px;
   line-height: 40px;
-  border-radius: 21px;
-  border: 1px $c-gallery solid;
-  width: 200px;
   position: relative;
+  width: 200px;
 
-  .minus {
-    @extend %product-extend-1;
+  .minus,
+  .plus {
+    border-radius: 21px 0 0 21px;
+    border-right: 1px $c-gallery solid;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s;
+    width: 50px;
+
+    &::before {
+      background: $c-fuscous-gray;
+      content: '';
+      height: 1px;
+      left: 50%;
+      margin-left: -7px;
+      position: absolute;
+      top: 50%;
+      width: 14px;
+    }
 
     &:hover {
       background: $c-gallery;
@@ -64,52 +65,35 @@ $c-thunderbird: #cd2706;
 
     &:active {
       background: $c-bon-jour;
-    }
-
-    &::before {
-      @extend %product-extend_2;
     }
   }
 
   .plus {
-    @extend %product-extend-1;
-    left: auto;
-    right: 0;
-    border: none;
+    border: 0;
     border-left: 1px $c-gallery solid;
     border-radius: 0 21px 21px 0;
-
-    &:hover {
-      background: $c-gallery;
-    }
-
-    &:active {
-      background: $c-bon-jour;
-    }
-
-    &::before {
-      @extend %product-extend_2;
-    }
+    left: auto;
+    right: 0;
 
     &::after {
-      width: 1px;
-      height: 14px;
       background: $c-fuscous-gray;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin-top: -6.5px;
-      margin-left: -0.5px;
       content: '';
+      height: 14px;
+      left: 50%;
+      margin-left: -0.5px;
+      margin-top: -6.5px;
+      position: absolute;
+      top: 50%;
+      width: 1px;
     }
   }
 
   .number {
-    display: block;
-    text-align: center;
-    margin: 0 50px;
-    font-size: 12px;
     color: $c-suva-gray;
+    display: block;
+    font-size: 12px;
+    margin: 0 50px;
+    text-align: center;
   }
 }
 
@@ -133,32 +117,32 @@ $c-thunderbird: #cd2706;
     white-space: normal;
 
     .preview-wrapper {
-      width: 100%;
       margin-bottom: 30px;
+      width: 100%;
     }
 
     .description {
-      width: 100%;
       padding-left: 0;
+      width: 100%;
     }
   }
 }
 
 .main-product-slider-wrapper {
-  max-width: 570px;
   margin: 0 auto;
+  max-width: 570px;
 }
 
 .product-big-preview-entry {
-  padding-bottom: 100%;
-  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: 100%;
 }
 
 .product-small-preview-entry {
-  max-width: 70px;
   margin: 0 auto;
+  max-width: 70px;
   opacity: 0.2;
   transition: all 0.15s;
 
@@ -172,39 +156,41 @@ $c-thunderbird: #cd2706;
   white-space: nowrap;
 
   .preview-wrapper {
-    width: 45%;
     display: inline-block;
-    vertical-align: middle;
     position: relative;
+    vertical-align: middle;
+    width: 45%;
 
     img {
       display: block;
-      max-width: 100%;
       height: auto;
       margin: 0 auto;
+      max-width: 100%;
     }
   }
 
   .description {
-    width: 55%;
     display: inline-block;
+    padding-left: 30px;
+    position: relative;
     vertical-align: middle;
     white-space: normal;
-    position: relative;
-    padding-left: 30px;
+    width: 55%;
   }
 }
 
 @media (min-width: 768px) {
-  .left-right-entry.align-right {
-    .preview-wrapper {
-      left: 55%;
-    }
+  .left-right-entry {
+    &.align-right {
+      .preview-wrapper {
+        left: 55%;
+      }
 
-    .description {
-      left: -45%;
-      padding-left: 0;
-      padding-right: 30px;
+      .description {
+        left: -45%;
+        padding-left: 0;
+        padding-right: 30px;
+      }
     }
   }
 }
@@ -219,10 +205,10 @@ $c-thunderbird: #cd2706;
   margin-bottom: 30px;
 
   .preview {
-    float: left;
     border-radius: 50%;
-    width: 50px;
+    float: left;
     height: auto;
+    width: 50px;
   }
 
   .heading-description {
@@ -235,43 +221,44 @@ $c-thunderbird: #cd2706;
     padding-left: 30px;
 
     &::before {
-      width: 13px;
-      height: 1px;
       background: $c-rio-grande;
-      position: absolute;
-      left: 0;
-      top: 9px;
       content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 9px;
+      width: 13px;
     }
 
     &::after {
-      width: 1px;
-      height: 13px;
       background: $c-rio-grande;
-      position: absolute;
-      left: 6px;
-      top: 3px;
       content: '';
+      height: 13px;
+      left: 6px;
+      position: absolute;
+      top: 3px;
+      width: 1px;
     }
   }
 
   .cons {
-    position: relative;
     padding-left: 30px;
+    position: relative;
 
     &::before {
-      width: 13px;
-      height: 1px;
-      background: $c-rio-grande;
-      position: absolute;
-      left: 0;
-      top: 9px;
-      content: '';
       background: $c-thunderbird;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 9px;
+      width: 13px;
     }
   }
 }
 
-.swiper-slide-active .product-small-preview-entry {
-  opacity: 1;
+.swiper-slide-active {
+  .product-small-preview-entry {
+    opacity: 1;
+  }
 }

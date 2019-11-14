@@ -1,15 +1,9 @@
 //urls
-$url-0: url('http://unionagency.one/exzo/img/icon-11.png');
-$url-1: url('http://unionagency.one/exzo/img/icon-20.png');
-$url-2: url('http://unionagency.one/exzo/img/icon-21.png');
-$url-3: url('http://unionagency.one/exzo/img/icon-5.png');
-$url-4: url('http://unionagency.one/exzo/img/icon-19.png');
-$url-5: url('http://unionagency.one/exzo/img/icon-6.png');
 
 #content-block {
-  position: relative;
-  overflow: hidden;
   left: 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .container {
@@ -22,9 +16,9 @@ $url-5: url('http://unionagency.one/exzo/img/icon-6.png');
 }
 
 .content-margins {
-  position: relative;
   border-left: 50px transparent solid;
   border-right: 50px transparent solid;
+  position: relative;
 
   &.grey {
     border-color: $c-black-haze;
@@ -430,7 +424,7 @@ body {
     opacity: 0;
     transition: all 0.3s;
     border-radius: inherit;
-    background: $url-0 center center no-repeat;
+    background: $icon-11 center center no-repeat;
     z-index: 1;
     transform: rotate(180deg);
   }
@@ -547,7 +541,7 @@ body {
     }
 
     ul li:before {
-      background-image: $url-2;
+      background-image: $icon-21;
     }
   }
 
@@ -598,7 +592,7 @@ body {
         height: 13px;
         display: inline-block;
         vertical-align: middle;
-        background: $url-1;
+        background: $icon-20;
         position: relative;
         margin-right: 12px;
       }
@@ -1186,7 +1180,7 @@ body {
 .button-close {
   display: inline-block;
   vertical-align: middle;
-  background: $url-3 50% 50% no-repeat;
+  background: $icon-5 50% 50% no-repeat;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -1510,14 +1504,14 @@ textarea::-moz-placeholder {
     right: 0;
     width: 50px;
     height: 50px;
-    background: $url-3 center center;
+    background: $icon-5 center center;
     cursor: pointer;
     z-index: 1;
     opacity: 0.5;
     display: none;
 
     &.light {
-      background-image: $url-4;
+      background-image: $icon-19;
     }
 
     &:hover {
@@ -1589,7 +1583,7 @@ form {
       height: 20px;
       border: 1px $c-gallery solid;
       border-radius: 2px;
-      background: $url-5 100px center no-repeat $white;
+      background: $icon-6 100px center no-repeat $white;
     }
   }
 
