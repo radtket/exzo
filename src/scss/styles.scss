@@ -1,9 +1,9 @@
-@import './variables';
-@import './reset';
-@import '../../node_modules/bourbon/core/bourbon';
 // Bootstrap
 @import './vendor/bootstrap';
+@import './variables';
+@import './reset';
 @import './vendor/bootstrap-extension';
+@import '../../node_modules/bourbon/core/bourbon';
 
 @import './components/global';
 @import './components/popups';
