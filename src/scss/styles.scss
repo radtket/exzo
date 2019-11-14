@@ -16,20 +16,20 @@
 @import './components/product';
 
 // ShortCodes
-@import './components/shortcodes/products';
-@import './components/shortcodes/banners';
-@import './components/shortcodes/blog';
-@import './components/shortcodes/tabulation';
-@import './components/shortcodes/icon-description';
+@import './shortcodes/products';
+@import './shortcodes/banners';
+@import './shortcodes/blog';
+@import './shortcodes/tabulation';
+@import './shortcodes/icon-description';
 
 @import './components/masonry';
 
 // Pages
-@import './components/pages/home';
-@import './components/pages/contacts';
-@import './components/pages/checkout';
-@import './components/pages/cart';
-@import './components/pages/blog';
+@import './pages/home';
+@import './pages/contacts';
+@import './pages/checkout';
+@import './pages/cart';
+@import './pages/blog';
 
 // Vendor
 @import './vendor/sumo-select';
