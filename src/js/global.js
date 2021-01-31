@@ -1,5 +1,6 @@
 import $ from "jquery";
 import "sumoselect";
+import "bootstrap-slider";
 import Swiper from "swiper";
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
@@ -291,6 +292,7 @@ $(document).on(
 // open ajax product popup
 // preload
 const showprogress = () => {
+	document.images.forEach(yo => console.log({ yo }));
 	if (document.images.length !== 0) {
 		let loaded = 0;
 		for (let i = 0; i < document.images.length; i += 1) {
@@ -515,6 +517,7 @@ $(".checkbox-toggle-title input").on("change", () => {
 $(document).ready(function() {
 	const minVal = parseInt($(".min-price").text(), 10);
 	const maxVal = parseInt($(".max-price").text(), 10);
+	console.log({ minVal, maxVal });
 	$("#prices-range").slider({
 		range: true,
 		min: minVal,
