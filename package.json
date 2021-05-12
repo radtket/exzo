@@ -21,7 +21,7 @@
 		"jquery.classycountdown": "^1.0.2",
 		"load-google-maps-api": "^2.0.1",
 		"sumoselect": "^3.0.5",
-		"swiper": "^3.3.1"
+		"swiper": "^6.5.1"
 	},
 	"devDependencies": {
 		"@babel/preset-env": "^7.4.3",
